@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 public class MainActivity extends Activity {
 
@@ -31,4 +32,11 @@ public class MainActivity extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
+	public void swap(View view) {
+		setContentView(R.layout.profil);
+	 }
+		public void swap2(View view) {
+			setContentView(R.layout.activity_main);
+	 }
+	
 }

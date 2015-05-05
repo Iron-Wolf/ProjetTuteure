@@ -9,8 +9,19 @@
     tools:context="com.iut_velizy.projettuteure.MainActivity" >
 
     <TextView
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hello_world" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="75dp"
+        android:layout_toRightOf="@+id/textView1"
+        android:text="Button" 
+        android:onClick="swap"/>
 
 </RelativeLayout>
