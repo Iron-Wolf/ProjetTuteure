@@ -5,4 +5,12 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
+<!-- Label des onglets -->    
+    <string name="labelCreateEvent"> Créer un évènement </string>
+    <string name="labelComingEvent"> Evènements à venir </string>
+    <string name="labelHistory"> Historique </string>
+    <string name="labelNearFriends"> Amis proches </string>
+    <string name="labelFriends"> Amis</string>
+    <string name="labelProfil">Profil</string>
+
 </resources>
