@@ -6,6 +6,7 @@ import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.app.ActionBar.Tab;
 import android.os.Bundle;
+import android.view.View;
 
 public class MainActivity extends Activity 
 {
@@ -23,8 +24,7 @@ public class MainActivity extends Activity
         String labelCreateEvent = getResources().getString(R.string.labelCreateEvent);
         Tab tab = actionBar.newTab();
         tab.setText(labelCreateEvent);
-        TabListener<CreateEvent> tl = new TabListener<CreateEvent>(this,
-        		labelCreateEvent, CreateEvent.class);
+        TabListener<CreateEvent> tl = new TabListener<CreateEvent>(this, labelCreateEvent, CreateEvent.class);
         tab.setTabListener(tl);
         actionBar.addTab(tab);
         
@@ -36,7 +36,7 @@ public class MainActivity extends Activity
         tab.setTabListener(tl2);
         actionBar.addTab(tab);
         
-     // Onglet 3 : Historique //
+        // Onglet 3 : Historique //
         String labelHistory = getResources().getString(R.string.labelHistory);
         tab = actionBar.newTab();
         tab.setText(labelHistory);
@@ -44,7 +44,7 @@ public class MainActivity extends Activity
         tab.setTabListener(tl3);
         actionBar.addTab(tab);
         
-     // Onglet 4 : Amis proches //
+        // Onglet 4 : Amis proches //
         String labelNearFriends = getResources().getString(R.string.labelNearFriends);
         tab = actionBar.newTab();
         tab.setText(labelNearFriends);
@@ -52,7 +52,7 @@ public class MainActivity extends Activity
         tab.setTabListener(tl4);
         actionBar.addTab(tab);
         
-     // Onglet 5 : Amis //
+        // Onglet 5 : Amis //
         String labelFriends = getResources().getString(R.string.labelFriends);
         tab = actionBar.newTab();
         tab.setText(labelFriends);
@@ -124,4 +124,7 @@ public class MainActivity extends Activity
             // User selected the already selected tab. Usually do nothing.
         }
     }
+    
+
+    			
 }
