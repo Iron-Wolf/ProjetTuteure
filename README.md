@@ -7,14 +7,20 @@ Toutes les infos sont pour Eclipse.
 
 ## Notes
 1. Comparer son code avec le repo.  
-N'importe où dans votre projet, faites __clic droit__ > __Compare With__ > __HEAD Revision__.  
-   * Sur un dossier, Eclipse affichera une arborescence avec les fichiers ayant un contenu différent de ce qui ce trouve sur le repo.  
-   * Sur un fichier, une nouvelle fenêtre s'affiche vous montrant les lignes de codes différentes entre le repo et votre fichier.
+Sur votre projet, faites __clic droit__ > __Compare With__ > __Commit...__.  
+   * Eclipse affichera une arborescence avec les fichiers ayant un contenu différent de ce qui ce trouve sur le repo.  
+   * Double cliquer sur un fichier pour afficher la différence entre votre code local et le dépot
 
 
 2. Parcourir les commit au sein d'Eclipse.  
-N'importe où dans votre projet, faites __clic droit__ > __Show In__ > __History__.  
-   * Cette manip vous affichera tout les commit. Utile si vous voulez récupérer un fichier provenant d'un certain commit.
+Sur votre projet, faites __clic droit__ > __Show In__ > __History__.  
+   * Cette manip vous affichera tout les commit.
+   * Ne pas oublier les options suivantes :  ![alt text](https://i.stack.imgur.com/jHlmb.png "all commit")
+
+
+3. Récupérer le code d'un commit.
+Sur votre projet, faites __clic droit__ > __Replace With__ > __Commit...__.  
+   * Attention, cela supprime tout les changement non sauvegarder
 
 ## Liens
 * [~~créer un nouveau projet GitHub sous Eclipse~~](http://www.throrinstudio.com/dev/creer-un-nouveau-projet-github-sous-eclipse/)  
