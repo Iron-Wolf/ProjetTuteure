@@ -10,95 +10,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical" >
 
-        <ImageButton
-            android:id="@+id/imageButton1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
-            android:src="@drawable/facebook_logo" />
-
-        <EditText
-            android:id="@+id/editTextLogin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/imageButton1"
-            android:layout_alignParentLeft="true"
-            android:ems="10"
-            android:hint="Login"
-            android:inputType="text" />
-
-        <EditText
-            android:id="@+id/editText3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@+id/editTextLogin"
-            android:ems="10"
-            android:hint="Nom"
-            android:inputType="text" />
-
-        <EditText
-            android:id="@+id/editText4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@+id/editText3"
-            android:ems="10"
-            android:hint="Prénom"
-            android:inputType="text" />
-
-        <EditText
-            android:id="@+id/editText5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@+id/editText4"
-            android:ems="10"
-            android:hint="Mail"
-            android:inputType="textEmailAddress" />
-
-        <EditText
-            android:id="@+id/editText8"
-            android:layout_width="152dp"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/button1"
-            android:layout_alignParentLeft="true"
-            android:ems="10"
-            android:hint="Code Postal"
-            android:inputType="number" />
-
-        <EditText
-            android:id="@+id/editText6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/editText8"
-            android:layout_alignParentLeft="true"
-            android:ems="10"
-            android:hint="Rue"
-            android:inputType="text" />
-
-        <EditText
-            android:id="@+id/editText2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@+id/editText5"
-            android:layout_marginTop="19dp"
-            android:ems="10"
-            android:hint="Question secrète"
-            android:inputType="text" />
-
-        <EditText
-            android:id="@+id/editText7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/editText6"
-            android:layout_alignParentLeft="true"
-            android:ems="10"
-            android:hint="Ville"
-            android:inputType="text" />
-
         <Button
             android:id="@+id/button1"
             android:layout_width="wrap_content"
@@ -107,35 +18,125 @@
             android:layout_alignRight="@+id/editText8"
             android:text="Enregistrer" />
 
+        <EditText
+            android:id="@+id/editText09"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textView1"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="Pays"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/editText7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/editText09"
+            android:ems="10"
+            android:hint="Ville"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/editText6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/editText7"
+            android:ems="10"
+            android:hint="Rue"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/editText8"
+            android:layout_width="152dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/editText6"
+            android:ems="10"
+            android:hint="Code Postal"
+            android:inputType="number" />
+
         <Button
             android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/editText8"
-            android:layout_toLeftOf="@+id/imageButton1"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/editText6"
             android:text="Modifier" />
 
         <EditText
-            android:id="@+id/editText9"
+            android:id="@+id/editText5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/editText7"
             android:layout_alignParentLeft="true"
+            android:layout_below="@+id/editTextLogin"
             android:ems="10"
-            android:hint="Pays"
-            android:inputType="text" >
+            android:hint="Mail"
+            android:inputType="textEmailAddress" />
 
-            <requestFocus />
-        </EditText>
+        <EditText
+            android:id="@+id/editText4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/editText5"
+            android:ems="10"
+            android:hint="Prénom"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/editText4"
+            android:ems="10"
+            android:hint="Nom"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/editTextLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="36dp"
+            android:layout_toLeftOf="@+id/button2"
+            android:ems="10"
+            android:hint="Login"
+            android:inputType="text" />
 
         <TextView
             android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/editText9"
-            android:layout_alignRight="@+id/editText8"
-            android:layout_marginRight="22dp"
+            android:layout_alignLeft="@+id/button1"
+            android:layout_below="@+id/editText3"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="79dp"
             android:text="Adresse" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textView1"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="38dp"
+            android:ems="10"
+            android:hint="Question secrète"
+            android:inputType="text" />
+
+        <ImageButton
+            android:id="@+id/imageButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/editText3"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="34dp"
+            android:src="@drawable/facebook_logo" />
 
     </RelativeLayout>
 
