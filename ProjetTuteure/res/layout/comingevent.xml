@@ -1,23 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/comingevent"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center">
- 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Evènement à venir" />
+android:id="@+id/comingevent"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:gravity="center"
+android:orientation="vertical" >
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-         />
- 
+	<RelativeLayout
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_weight="0.51" >
+	
+		<Button
+		android:id="@+id/button1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentTop="true"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="32dp"
+		android:minHeight="50dip"
+		android:minWidth="100dip"
+		android:text="Evènements en attente" />
+		
+		<TextView
+		android:id="@+id/textView1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentLeft="true"
+		android:layout_below="@+id/button1"
+		android:layout_marginTop="30dp"
+		android:text="Nom de l&apos;évènement à venir" />
+
+		<TextView
+		    android:id="@+id/textView2"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignBottom="@+id/button2"
+		    android:layout_alignParentLeft="true"
+		    android:text="Adresse de l&apos;évènement" />
+
+		<Button
+		    android:id="@+id/button2"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentRight="true"
+		    android:layout_alignTop="@+id/textView1"
+		    android:layout_marginRight="59dp"
+		    android:minHeight="50dp"
+		    android:minWidth="@dimen/activity_vertical_margin"
+		    android:text="maps" />
+	
+	</RelativeLayout>
+
 </LinearLayout>
