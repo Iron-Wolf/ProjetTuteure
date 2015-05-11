@@ -18,13 +18,18 @@ Sur votre projet, faites __clic droit__ > __Show In__ > __History__.
    * Ne pas oublier les options suivantes :  ![alt text](https://i.stack.imgur.com/jHlmb.png "all commit")  
 
 
-3. Récupérer le code d'un commit.
+3. Récupérer le code d'un commit.  
 Sur votre projet, faites __clic droit__ > __Replace With__ > __Commit...__.  
    * Attention, cela supprime tout les changement non sauvegardés.  
 
 
-4. Mettre à jour une branche.  
+4. Récupérer une branche.  
 Sur le commit, dans la vue *history* : __Clic droit__ > __Checkout__.  
+
+
+5. Changer une branche.  
+Sur le commit, dans la vue *history* : __Clic droit__ > __Rebase on__.  
+
 
 ## Liens
 * [~~créer un nouveau projet GitHub sous Eclipse~~](http://www.throrinstudio.com/dev/creer-un-nouveau-projet-github-sous-eclipse/)  
