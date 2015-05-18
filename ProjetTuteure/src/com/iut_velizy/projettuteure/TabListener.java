@@ -35,9 +35,9 @@ public class TabListener<T extends Fragment> implements ActionBar.TabListener
         // Check if the fragment is already initialized
         if (mFragment == null) 
         {
-            // If not, instantiate and add it to the activity
+            // If not, instantiate and replace it to the activity
             mFragment = Fragment.instantiate(mActivity, mClass.getName());
-            ft.add(android.R.id.content, mFragment, mTag);
+            ft.replace(android.R.id.content, mFragment, mTag);
         } 
         else 
         {

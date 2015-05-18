@@ -1,12 +1,5 @@
 package com.iut_velizy.dao;
 
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
-import java.io.StringReader;
-import java.util.ArrayList;
-import java.util.Scanner;
-
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -18,7 +11,6 @@ import com.iut_velizy.projettuteure.MainActivity;
 
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
-import android.util.JsonReader;
 import android.util.Log;
 
 /**

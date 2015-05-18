@@ -1,16 +1,21 @@
 package com.iut_velizy.projettuteure;
 
-import java.util.ArrayList;
-
 import com.iut_velizy.dao.Initialisation;
 
 import android.app.ActionBar;
 import android.app.Activity;
-import android.app.Fragment;
-import android.app.FragmentTransaction;
+import android.app.AlertDialog;
 import android.app.ActionBar.Tab;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.os.Message;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
+import android.widget.LinearLayout;
 
 public class MainActivity extends Activity 
 {
@@ -18,8 +23,13 @@ public class MainActivity extends Activity
     @Override
     public void onCreate(Bundle savedInstanceState) 
     {
-        super.onCreate(savedInstanceState);
- 
+    	if (savedInstanceState != null)
+		{
+			savedInstanceState.remove ("android:support:fragments");
+		}
+		
+		super.onCreate(savedInstanceState);
+        
         ActionBar actionBar = getActionBar();
  
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
@@ -71,14 +81,39 @@ public class MainActivity extends Activity
         TabListener<Profil> tl6 = new TabListener<Profil>(this, labelProfil, Profil.class);
         tab.setTabListener(tl6);
         actionBar.addTab(tab);
- 
+        
     }
     
     @Override
     public void onStart()
     {
     	super.onStart();
-    	new Initialisation(this).execute();
+    	
+    	//test si le smartphone est connecté à internet
+    	ConnectivityManager connMgr = (ConnectivityManager) 
+    	        getSystemService(Context.CONNECTIVITY_SERVICE);
+    	NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
+    	if (networkInfo != null && networkInfo.isConnected())
+    	{
+    		// récupere les données
+    		new Initialisation(this).execute();
+    	} 
+    	else
+    	{
+    		// affiche une erreur
+    		AlertDialog alertDialog = new AlertDialog.Builder(
+                    MainActivity.this).create();
+    		
+    		alertDialog.setTitle("Problème réseau");
+    		alertDialog.setMessage("L'application a besoin d'une connection Internet pour fonctionner");
+    		//alertDialog.setIcon(R.drawable.tick);
+    		
+    		Message msg = null;
+    		alertDialog.setButton(DialogInterface.BUTTON_POSITIVE,"OK", msg);
+    		
+            alertDialog.show();
+    	}
+    	
     }
     
     public void populate(String data)
@@ -87,4 +122,11 @@ public class MainActivity extends Activity
     	
     }
     
+    public void swap(View view) {
+    	setContentView(R.layout.addfriends);
+	}
+    
+	public void swap2(View view) {
+		setContentView(R.layout.friends);
+	}
 }
