@@ -19,7 +19,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="18dp"
             android:text="Ajouter des contacts"
-            android:onClick="swap" />
+            android:onClick="showDialogAddFriends" />
 
         <TextView
             android:id="@+id/textView1"

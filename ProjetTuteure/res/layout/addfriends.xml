@@ -42,14 +42,21 @@
 		android:src="@drawable/facebook_logo" />
 		
 		<Button
-		android:id="@+id/button1"
+		android:id="@+id/buttonValidation"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_below="@+id/imageView1"
 		android:layout_centerHorizontal="true"
 		android:layout_marginTop="57dp"
-		android:text="Valider"
-		android:onClick="swap2" />
+		android:text="Valider"/>
+
+		<ImageButton
+		    android:id="@+id/imageButtonRetour"
+		    android:layout_width="60dp"
+		    android:layout_height="60dp"
+		    android:layout_alignParentLeft="true"
+		    android:layout_alignParentTop="true"
+		    android:src="@drawable/ic_launcher" />
 	
 	</RelativeLayout>
 </LinearLayout>

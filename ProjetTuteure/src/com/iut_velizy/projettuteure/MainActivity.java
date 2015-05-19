@@ -2,6 +2,7 @@ package com.iut_velizy.projettuteure;
 
 import com.iut_velizy.dao.Initialisation;
 
+import dialogCustom.MyDialogAddFriends;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -12,12 +13,13 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Message;
+import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.LinearLayout;
 
-public class MainActivity extends Activity 
+public class MainActivity extends FragmentActivity 
 {
  
     @Override
@@ -31,6 +33,8 @@ public class MainActivity extends Activity
 		super.onCreate(savedInstanceState);
         
         ActionBar actionBar = getActionBar();
+        getActionBar().setDisplayShowHomeEnabled(false);  // hides action bar icon
+        getActionBar().setDisplayShowTitleEnabled(false); // hides action bar title
  
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
  
@@ -121,12 +125,10 @@ public class MainActivity extends Activity
     	// mettre à jour les vues
     	
     }
-    
-    public void swap(View view) {
-    	setContentView(R.layout.addfriends);
-	}
-    
-	public void swap2(View view) {
-		setContentView(R.layout.friends);
+	
+	public void showDialogAddFriends(View view)
+	{
+		MyDialogAddFriends newF = new MyDialogAddFriends();
+		newF.show(getFragmentManager(), "dialog");
 	}
 }

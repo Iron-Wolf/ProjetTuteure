@@ -119,7 +119,7 @@
             android:inputType="text" />
 
         <ImageButton
-            android:id="@+id/imageButton1"
+            android:id="@+id/imageButtonRetour"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_above="@+id/editText3"
@@ -132,7 +132,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_alignRight="@+id/imageButton1"
+            android:layout_alignRight="@+id/imageButtonRetour"
             android:text="Modifier" />
 
         <EditText
