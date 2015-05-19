@@ -1,4 +1,4 @@
-package dialogCustom;
+package com.iut_velizy.dialogCustom;
 
 import android.app.Dialog;
 import android.app.DialogFragment;

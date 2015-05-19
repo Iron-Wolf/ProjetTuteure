@@ -1,8 +1,8 @@
 package com.iut_velizy.projettuteure;
 
 import com.iut_velizy.dao.Initialisation;
+import com.iut_velizy.dialogCustom.MyDialogAddFriends;
 
-import dialogCustom.MyDialogAddFriends;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.app.AlertDialog;
