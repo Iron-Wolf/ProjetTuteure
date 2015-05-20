@@ -5,70 +5,93 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center">
+    
+    <ScrollView 
+        android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:scrollbars = "vertical">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical" >
+	    <RelativeLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:orientation="vertical" >
+	        
+	        <Button
+	            android:id="@+id/buttonAddFriends"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentTop="true"
+	            android:layout_centerHorizontal="true"
+	            android:layout_marginTop="18dp"
+	            android:text="Ajouter des contacts"
+	            android:onClick="showDialogAddFriends" />
+	        
+	        <View
+				android:layout_width="fill_parent"
+	       		android:layout_height="1px"
+	       		android:layout_below="@+id/buttonAddFriends"
+	       		android:layout_marginTop="10dp"
+	        	android:background="#FF909090" />
+	        
+	        <RelativeLayout 
+	            android:layout_width="match_parent"
+		       	android:layout_height="wrap_content"
+		       	 android:layout_below="@+id/buttonAddFriends"
+		        android:layout_marginTop="20dp"
+		        android:layout_marginLeft="10dp"
+		        android:layout_marginRight="10dp">
+        
+		        <ImageView
+		            android:id="@+id/imageViewImage"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentLeft="true"
+		            android:layout_below="@+id/button1"
+		            android:layout_marginLeft="14dp"
+		            android:layout_marginTop="30dp"
+		            android:src="@drawable/ic_launcher" />
+		
+		        <TextView
+		            android:id="@+id/textViewFirstName"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignTop="@+id/imageViewImage"
+		            android:layout_toRightOf="@+id/imageViewImage"
+		            android:layout_marginLeft="10dp"
+		            android:text="Prénom"
+		            android:textAppearance="?android:attr/textAppearanceMedium" />
 
-        <Button
-            android:id="@+id/button1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="18dp"
-            android:text="Ajouter des contacts"
-            android:onClick="showDialogAddFriends" />
+		        <TextView
+		            android:id="@+id/textView2"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignBaseline="@+id/textViewFirstName"
+		            android:layout_alignBottom="@+id/textViewFirstName"
+		            android:layout_marginLeft="10dp"
+		            android:layout_toRightOf="@+id/textViewFirstName"
+		            android:text="Nom"
+		            android:textAppearance="?android:attr/textAppearanceMedium" />
 
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/imageView1"
-            android:layout_toRightOf="@+id/imageView1"
-            android:text="Prénom"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
+		        <TextView
+		            android:id="@+id/textViewDistance"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignLeft="@+id/textViewFirstName"
+		            android:layout_alignParentBottom="true"
+		            android:text="Distance (en m)"
+		            android:textAppearance="?android:attr/textAppearanceSmall" />
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/textView1"
-            android:layout_alignBottom="@+id/textView1"
-            android:layout_centerHorizontal="true"
-            android:text="Nom"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
+		        <EditText
+		            android:id="@+id/editText1"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentBottom="true"
+		            android:layout_toRightOf="@+id/textViewDistance"
+		            android:ems="5"
+		            android:inputType="number" />
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/editText1"
-            android:layout_alignBottom="@+id/editText1"
-            android:layout_alignRight="@+id/textView2"
-            android:text="Distance (en m)"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
 
-        <ImageView
-            android:id="@+id/imageView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@+id/button1"
-            android:layout_marginLeft="14dp"
-            android:layout_marginTop="30dp"
-            android:src="@drawable/ic_launcher" />
-
-        <EditText
-            android:id="@+id/editText1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textView2"
-            android:layout_toRightOf="@+id/textView3"
-            android:ems="5"
-            android:inputType="number" />
-
-    </RelativeLayout>
- 
+			</RelativeLayout>
+    	</RelativeLayout>
+ 	</ScrollView>
 </LinearLayout>

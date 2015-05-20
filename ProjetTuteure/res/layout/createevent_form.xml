@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/createevent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+	
+	
+	<RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical" >
+        
+        <ImageButton
+			android:id="@+id/imageButtonRetour"
+			android:layout_width="30dp"
+			android:layout_height="30dp"
+			android:src="@drawable/flecheretour"
+			android:background="@null" />
+
+        <TextView
+            android:id="@+id/textViewPageTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageButtonRetour"
+            android:layout_centerHorizontal="true"
+            android:text="Créer un évènement"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    </RelativeLayout>
+
+    <ScrollView 
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:scrollbars = "vertical">
+        
+	    <RelativeLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+			android:layout_marginTop="5dp"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+	        android:orientation="vertical" >
+	        
+	        <EditText
+	            android:id="@+id/editTextNameEvent"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"  
+	            android:ems="10"
+	            android:hint="Nom de l&apos;évènement" />
+	        
+	        <TextView
+	            android:id="@+id/textViewInterest"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerHorizontal="true"
+	            android:layout_marginTop="40dp"
+	            android:text="Centre d&apos;interêt" />
+	
+	        <Spinner
+	            android:id="@+id/spinnerInterest"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/textViewInterest"
+	            android:layout_marginTop="0dp"/>
+	
+	        <TextView
+	            android:id="@+id/textViewEventDate"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/spinnerInterest"
+	            android:layout_centerHorizontal="true"
+	            android:layout_marginTop="10dp"
+	            android:text="Date et heure de l'évènement" />
+	        
+	        <EditText
+	            android:id="@+id/editTextEventDate"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/textViewEventDate"
+	            android:layout_marginTop="0dp"  
+	            android:ems="7"
+	            android:hint="01/01/2000"
+	            android:inputType="date" />
+	        
+	        <EditText
+	            android:id="@+id/editTextEventTime"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/textViewEventDate"
+	            android:layout_marginTop="0dp"
+	            android:layout_marginRight="20dp" 
+	            android:layout_toRightOf="@+id/editTextEventDate"
+	            android:ems="5"
+	            android:hint="hh:mm"
+	            android:inputType="time" />
+	
+			<TextView
+	            android:id="@+id/textViewEndDate"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/textViewEventDate"
+	            android:layout_centerHorizontal="true"
+	            android:layout_marginTop="40dp"
+	            android:text="Date et heure de l'évènement" />
+			
+			<EditText
+			    android:id="@+id/editTextEndDate"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_marginTop="0dp"
+			    android:layout_below="@+id/textViewEndDate"
+			    android:ems="10"
+			    android:hint="01/01/2000"
+			    android:inputType="date" />
+			
+			<EditText
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_marginTop="240dp"
+			    android:ems="10"
+			    android:hint="Message complémentaire"
+			    android:lines="4"
+			    />
+			
+			<Button
+			    android:id="@+id/button1"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_centerHorizontal="true"
+			    android:layout_marginTop="350dp"
+			    android:text="Inviter des amis" />
+
+    	</RelativeLayout>
+	</ScrollView>
+</LinearLayout>

@@ -53,15 +53,7 @@ public class MainActivity extends FragmentActivity
         TabListener<ComingEvent> tl2 = new TabListener<ComingEvent>(this, labelComingEvent, ComingEvent.class);
         tab.setTabListener(tl2);
         actionBar.addTab(tab);
-        
-        // Onglet 3 : Historique //
-        String labelHistory = getResources().getString(R.string.labelHistory);
-        tab = actionBar.newTab();
-        tab.setText(labelHistory);
-        TabListener<History> tl3 = new TabListener<History>(this, labelHistory, History.class);
-        tab.setTabListener(tl3);
-        actionBar.addTab(tab);
-        
+                
         // Onglet 4 : Amis proches //
         String labelNearFriends = getResources().getString(R.string.labelNearFriends);
         tab = actionBar.newTab();

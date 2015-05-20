@@ -1,23 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/profil"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" >
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical" >
+        
+        <ImageButton
+			android:id="@+id/imageButtonRetour"
+			android:layout_width="30dp"
+			android:layout_height="30dp"
+			android:src="@drawable/flecheretour"
+			android:background="@null" />
 
-    <ScrollView          
+        <TextView
+            android:id="@+id/textViewPageTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageButtonRetour"
+            android:layout_centerHorizontal="true"
+            android:text="Modifier le profil"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    </RelativeLayout>
+
+    <ScrollView 
     	android:layout_width="fill_parent"
     	android:layout_height="fill_parent"
     	android:scrollbars = "vertical">
     
-		<RelativeLayout
+	    <RelativeLayout
 	        android:layout_width="match_parent"
-	        android:layout_marginLeft="5dp"
-        	android:layout_marginRight="5dp"
-        	android:layout_marginTop="5dp"
-	        android:orientation="vertical" >       
-	
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical" >
+	        
 	        <Button
 	            android:id="@+id/button1"
 	            android:layout_width="wrap_content"
@@ -26,7 +49,7 @@
 	            android:layout_alignRight="@+id/editText8"
 	            android:text="Enregistrer" />
 	
-	        <TextView
+	        <EditText
 	            android:id="@+id/editText09"
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
@@ -34,6 +57,7 @@
 	            android:layout_below="@+id/textView1"
 	            android:layout_marginTop="16dp"
 	            android:ems="10"
+	            android:hint="Pays"
 	            android:inputType="text" />
 	
 	        <EditText
@@ -117,21 +141,13 @@
 	            android:hint="Question secrète"
 	            android:inputType="text" />
 	
-	        <ImageButton
-	            android:id="@+id/imageButtonRetour"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_above="@+id/editText3"
-	            android:layout_alignParentRight="true"
-	            android:layout_marginRight="34dp"
-	            android:src="@drawable/facebook_logo" />
+	
 	
 	        <Button
 	            android:id="@+id/button2"
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
 	            android:layout_alignParentBottom="true"
-	            android:layout_alignRight="@+id/imageButtonRetour"
 	            android:text="Modifier" />
 	
 	        <EditText
@@ -145,7 +161,6 @@
 	            android:hint="Login"
 	            android:inputType="text" />
 
-		
     	</RelativeLayout>
 	</ScrollView>
 </LinearLayout>

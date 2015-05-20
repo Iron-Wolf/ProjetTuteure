@@ -14,7 +14,7 @@ public class AddFriends extends Fragment
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
  
-        return (LinearLayout) inflater.inflate(R.layout.addfriends, container, false);
+        return (LinearLayout) inflater.inflate(R.layout.friends_addfriends, container, false);
     }
     
 }

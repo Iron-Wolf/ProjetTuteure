@@ -4,87 +4,81 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical" >
-
-        <EditText
-            android:id="@+id/editText3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/editText2"
-            android:layout_alignBottom="@+id/editText2"
-            android:layout_toRightOf="@+id/editText2"
-            android:ems="10"
-            android:inputType="time" />
-
-        <EditText
-            android:id="@+id/editText4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/editText2"
-            android:layout_toLeftOf="@+id/editText3"
-            android:ems="10"
-            android:inputType="date" />
-
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@+id/editText1"
-            android:layout_marginTop="20dp"
-            android:text="Centre d&apos;interêt" />
-
-        <Spinner
-            android:id="@+id/spinner"
+    
+    <ScrollView 
+        android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:scrollbars = "vertical">
+    	
+        <RelativeLayout 
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@+id/textView1" />
+	        android:layout_marginLeft="5dp"
+        	android:layout_marginRight="5dp"
+        	android:layout_marginTop="5dp"
+	        android:orientation="vertical">
+	        
 
-        <EditText
-            android:id="@+id/editText1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="51dp"
-            android:ems="10"
-            android:hint="Nom de l&apos;évènement" />
-
-<EditText
-    android:id="@+id/editText2"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_alignParentLeft="true"
-    android:layout_below="@+id/spinner"
-    android:ems="10"
-    android:inputType="date" />
-
-<EditText
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:layout_alignParentLeft="true"
-    android:layout_below="@+id/editText4"
-    android:layout_marginTop="20dp"
-    android:ems="10"
-    android:gravity="left"
-    android:hint="Message"
-    android:lines="4"
-    android:singleLine="false" />
-
-<Button
-    android:id="@+id/button1"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_alignParentBottom="true"
-    android:layout_centerHorizontal="true"
-    android:layout_marginBottom="15dp"
-    android:text="Inviter des amis" />
-
-    </RelativeLayout>
-
+		    <Button
+		        android:id="@+id/buttonOrganise"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_toLeftOf="@+id/TextViewTest"
+		        android:text="Organisation" />
+		    
+		    <TextView
+	       android:id="@+id/TextViewTest"
+	       android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:layout_alignParentTop="true"
+	       android:layout_centerHorizontal="true" />
+		
+		    <Button
+		        android:id="@+id/buttonCreateEvent"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_toRightOf="@+id/TextViewTest"
+		        android:text="Créer" />
+		    
+		    <View
+			android:layout_width="fill_parent"
+       		android:layout_height="1px"
+       		android:layout_below="@+id/buttonCreateEvent"
+       		android:layout_marginTop="10dp"
+        	android:background="#FF909090" />
+		    
+		    <RelativeLayout 
+		        android:layout_width="match_parent"
+	       		android:layout_height="wrap_content"
+	        	android:layout_marginTop="70dp"
+	        	android:layout_marginLeft="10dp"
+	        	android:layout_marginRight="10dp">
+		
+			    <TextView
+			        android:id="@+id/textViewEventName"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="Nom de l'évènement" />
+			
+			    <TextView
+			        android:id="@+id/textViewEventDateTime"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_below="@+id/textViewEventName"
+			        android:text="Date et heure" />
+			
+			    <TextView
+			        android:id="@+id/textViewParticipants"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_below="@+id/textViewEventDateTime"
+			        android:text="Participants" />
+			
+			    <Spinner
+			        android:id="@+id/spinnerParticipants"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_below="@+id/textViewParticipants" />
+		    </RelativeLayout>
+	    </RelativeLayout>
+	</ScrollView>
 </LinearLayout>

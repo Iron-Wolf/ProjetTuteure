@@ -35,7 +35,7 @@ public class MyDialogAddFriends extends DialogFragment
 	@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 	{
-        View view = inflater.inflate(R.layout.addfriends, container, false);
+        View view = inflater.inflate(R.layout.friends_addfriends, container, false);
 /*
         Button saveButton = (Button) view.findViewById(R.id.buttonValidation);
         saveButton.setOnClickListener(new View.OnClickListener() {

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/history"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:gravity="center"
+	android:orientation="vertical" >
+
+	<RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical" >
+        
+        <ImageButton
+			android:id="@+id/imageButtonRetour"
+			android:layout_width="30dp"
+			android:layout_height="30dp"
+			android:src="@drawable/flecheretour"
+			android:background="@null" />
+
+        <TextView
+            android:id="@+id/textViewPageTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageButtonRetour"
+            android:layout_centerHorizontal="true"
+            android:text="Historique"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    </RelativeLayout>
+		
+	<ScrollView 
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:scrollbars = "vertical">	
+		
+		<RelativeLayout 
+		    android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="10dp"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp">
+			
+			<TextView
+				android:id="@+id/textViewNameEvent"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentLeft="true"
+				android:text="Nom de l&apos;évènement" />
+			
+			<TextView
+				android:id="@+id/textViewAddressEvent"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="5dp"
+				android:layout_below="@+id/textViewNameEvent"
+				android:layout_alignParentLeft="true"
+				android:text="Adresse de l&apos;évènement" />
+			
+			<TextView
+				android:id="@+id/textViewParticipants"
+				android:layout_below="@+id/textViewAddressEvent"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="5dp"
+				android:layout_alignParentLeft="true"
+				android:text="Participants" />
+				
+			<Spinner
+				android:id="@+id/spinnerParticipants"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="5dp"
+				android:layout_below="@+id/textViewParticipants" />
+			
+			<View
+				android:layout_width="fill_parent"
+	       		android:layout_height="1px"
+	       		android:layout_below="@+id/spinnerParticipants" 
+	       		android:layout_marginTop="5dp"
+	        	android:background="#FF909090" />
+			
+		</RelativeLayout>
+	</ScrollView>
+</LinearLayout>

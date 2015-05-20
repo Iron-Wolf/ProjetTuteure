@@ -6,49 +6,95 @@
     android:gravity="center"
     android:orientation="vertical" >
 
+    <ScrollView 
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:scrollbars = "vertical">
+    	
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.51" >
-
+        android:layout_marginTop="10dp"
+		android:layout_marginLeft="10dp"
+		android:layout_marginRight="10dp"
+		android:gravity="center" >
+        
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/buttonWaitResponse"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="32dp"
-            android:minHeight="50dip"
-            android:minWidth="100dip"
-            android:text="Historique" />
-
+            android:layout_toLeftOf="@+id/TextViewTest"
+            android:text="Non répondu" />
+        
         <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@+id/button1"
-            android:layout_marginTop="30dp"
-            android:text="Nom de l&apos;évènement à venir" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/button2"
-            android:layout_alignParentLeft="true"
-            android:text="Adresse de l&apos;évènement" />
-
+	       android:id="@+id/TextViewTest"
+	       android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:layout_alignParentTop="true"
+	       android:layout_centerHorizontal="true" />
+        
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/buttonHistory"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_alignTop="@+id/textView1"
-            android:layout_marginRight="59dp"
-            android:minHeight="50dp"
-            android:minWidth="@dimen/activity_vertical_margin"
-            android:text="maps" />
-    </RelativeLayout>
+            android:layout_toRightOf="@+id/TextViewTest"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="20dp"
+            android:text="Historique" />
+        
+        
+       <View
+			android:layout_width="fill_parent"
+       		android:layout_height="1px"
+       		android:layout_below="@+id/buttonHistory"
+       		android:layout_marginTop="10dp"
+        	android:background="#FF909090" />
+       
 
+	   <RelativeLayout 
+	   		android:layout_width="match_parent"
+	       	android:layout_height="wrap_content"
+	        android:layout_marginTop="70dp"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginRight="10dp" >
+       
+		   	<TextView
+		    	android:id="@+id/textViewEventName"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="0dp"
+		        android:text="Nom de l&apos;évènement à venir" />
+		
+		        <TextView
+		            android:id="@+id/textViewEventAddress"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_below="@+id/textViewEventName"
+		            android:layout_marginTop="10dp"
+		            android:text="Adresse de l&apos;évènement" />
+		        
+		         <View
+					android:layout_width="fill_parent"
+		       		android:layout_height="1px"
+		       		android:layout_below="@+id/textViewEventAddress"
+		       		android:layout_marginTop="10dp"
+		        	android:background="#FF909090" />
+
+		         <ImageButton
+		             android:id="@+id/buttonMaps"
+		             android:layout_width="40dp"
+		             android:layout_height="40dp"
+		             android:layout_alignBottom="@+id/textViewEventAddress"
+		             android:layout_alignParentRight="true"
+		             android:layout_marginRight="30dp"
+		             android:src="@drawable/google_maps_icon" />
+
+        	</RelativeLayout>
+
+
+
+    	</RelativeLayout>
+	</ScrollView>
 </LinearLayout>
