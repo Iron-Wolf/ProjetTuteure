@@ -1,151 +1,208 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/profil"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:orientation="vertical" >
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical" >
+        
+        <ImageButton
+			android:id="@+id/imageButtonRetour"
+			android:layout_width="30dp"
+			android:layout_height="30dp"
+			android:src="@drawable/flecheretour"
+			android:background="@null" />
 
-    <ScrollView          
+        <TextView
+            android:id="@+id/textViewPageTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageButtonRetour"
+            android:layout_centerHorizontal="true"
+            android:text="Modifier le profil"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    </RelativeLayout>
+
+    <ScrollView 
     	android:layout_width="fill_parent"
     	android:layout_height="fill_parent"
     	android:scrollbars = "vertical">
     
-		<RelativeLayout
+	    <RelativeLayout
 	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
 	        android:layout_marginLeft="5dp"
-        	android:layout_marginRight="5dp"
-        	android:layout_marginTop="5dp"
-	        android:orientation="vertical" >       
-	
-	        <Button
-	            android:id="@+id/button1"
-	            android:layout_width="wrap_content"
+	        android:layout_marginRight="5dp"
+	        android:orientation="vertical" >
+	        
+	        <RelativeLayout
+	            android:id="@+id/relativeLayout1"
+	            android:layout_width="match_parent"
 	            android:layout_height="wrap_content"
-	            android:layout_alignParentBottom="true"
-	            android:layout_alignRight="@+id/editText8"
-	            android:text="Enregistrer" />
-	
-	        <TextView
-	            android:id="@+id/editText09"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_alignParentLeft="true"
-	            android:layout_below="@+id/textView1"
-	            android:layout_marginTop="16dp"
-	            android:ems="10"
-	            android:inputType="text" />
-	
-	        <EditText
-	            android:id="@+id/editText7"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_alignParentLeft="true"
-	            android:layout_below="@+id/editText09"
-	            android:ems="10"
-	            android:hint="Ville"
-	            android:inputType="text" />
-	
-	        <EditText
-	            android:id="@+id/editText6"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_alignParentLeft="true"
-	            android:layout_below="@+id/editText7"
-	            android:ems="10"
-	            android:hint="Rue"
-	            android:inputType="text" />
-	
-	        <EditText
-	            android:id="@+id/editText8"
-	            android:layout_width="152dp"
-	            android:layout_height="wrap_content"
-	            android:layout_alignParentLeft="true"
-	            android:layout_below="@+id/editText6"
-	            android:ems="10"
-	            android:hint="Code Postal"
-	            android:inputType="number" />
-	
-	        <EditText
-	            android:id="@+id/editText5"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_alignParentLeft="true"
-	            android:layout_below="@+id/editTextLogin"
-	            android:ems="10"
-	            android:hint="Mail"
-	            android:inputType="textEmailAddress" />
-	
-	        <EditText
-	            android:id="@+id/editText4"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_alignParentLeft="true"
-	            android:layout_below="@+id/editText5"
-	            android:ems="10"
-	            android:hint="Prénom"
-	            android:inputType="text" />
-	
-	        <EditText
-	            android:id="@+id/editText3"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_alignParentLeft="true"
-	            android:layout_below="@+id/editText4"
-	            android:ems="10"
-	            android:hint="Nom"
-	            android:inputType="text" />
-	
-	        <TextView
-	            android:id="@+id/textView1"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_alignLeft="@+id/button1"
-	            android:layout_below="@+id/editText3"
-	            android:layout_marginLeft="28dp"
-	            android:layout_marginTop="79dp"
-	            android:text="Adresse" />
-	
-	        <EditText
-	            android:id="@+id/editText2"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_alignBottom="@+id/textView1"
-	            android:layout_alignParentLeft="true"
-	            android:layout_marginBottom="38dp"
-	            android:ems="10"
-	            android:hint="Question secrète"
-	            android:inputType="text" />
-	
-	        <ImageButton
-	            android:id="@+id/imageButtonRetour"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_above="@+id/editText3"
-	            android:layout_alignParentRight="true"
-	            android:layout_marginRight="34dp"
-	            android:src="@drawable/facebook_logo" />
-	
-	        <Button
-	            android:id="@+id/button2"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_alignParentBottom="true"
-	            android:layout_alignRight="@+id/imageButtonRetour"
-	            android:text="Modifier" />
-	
-	        <EditText
-	            android:id="@+id/editTextLogin"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_alignParentLeft="true"
-	            android:layout_alignParentTop="true"
-	            android:layout_marginTop="35dp"
-	            android:ems="10"
-	            android:hint="Login"
-	            android:inputType="text" />
+	            android:layout_centerHorizontal="true"
+	            android:layout_marginTop="5dp"
+	            android:orientation="vertical" >
 
-		
-    	</RelativeLayout>
+	            
+	        <ImageView
+	            android:id="@+id/imageViewImage"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
+	            android:src="@android:drawable/ic_menu_gallery" />
+	        
+	        <TextView
+	                android:id="@+id/editTextImage"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_toRightOf="@+id/imageViewImage"
+	                android:layout_alignTop="@+id/imageViewImage"
+	                android:layout_marginLeft="10dp"
+	                android:ems="10"
+	                android:hint="image"
+	                android:inputType="text" />
+	            
+	            
+	            
+	            
+	        <ImageView
+	                android:id="@+id/imageViewProfil"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_marginTop="10dp"
+	                android:layout_below="@+id/imageViewImage"
+	                android:src="@android:drawable/ic_menu_myplaces" />
+	        
+	         <TextView
+	                android:id="@+id/editTextLogin"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_toRightOf="@+id/imageViewProfil"
+	                android:layout_alignTop="@+id/imageViewProfil"
+	                android:layout_marginLeft="10dp"
+	                android:ems="10"
+	                android:hint="Login"
+	                android:inputType="text" />
+
+	            <TextView
+	                android:id="@+id/editTextFirstName"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_toRightOf="@+id/imageViewProfil"
+	                android:layout_below="@+id/editTextLogin"
+	                android:layout_marginLeft="10dp"
+	                android:ems="10"
+	                android:hint="Prénom"
+	                android:inputType="text" />
+
+	            <TextView
+	                android:id="@+id/editTextSecondName"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_toRightOf="@+id/imageViewProfil"
+	                android:layout_below="@+id/editTextFirstName"
+	                android:layout_marginLeft="10dp"
+	                android:ems="10"
+	                android:hint="Nom"
+	                android:inputType="text" />
+
+	            <TextView
+	                android:id="@+id/editTextMail"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_toRightOf="@+id/imageViewProfil"
+	                android:layout_below="@+id/editTextSecondName"
+	                android:layout_marginLeft="10dp"
+	                android:ems="10"
+	                android:hint="Mail"
+	                android:inputType="textEmailAddress" />
+	        
+	            
+
+
+	            <ImageView
+	                android:id="@+id/imageViewAdresse"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_below="@+id/editTextMail"
+	                android:layout_marginTop="20dp"
+	                android:src="@android:drawable/ic_dialog_map" />
+
+	            <TextView
+	                android:id="@+id/editTextPays"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignTop="@+id/imageViewAdresse"
+	                android:layout_toRightOf="@+id/imageViewAdresse"
+	                android:layout_marginLeft="10dp"
+	                android:ems="10"
+	                android:hint="Pays"
+	                android:inputType="text" />
+
+	            <TextView
+	                android:id="@+id/editTextVille"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_toRightOf="@+id/imageViewAdresse"
+	                android:layout_below="@+id/editTextPays"
+	                android:layout_marginLeft="10dp"
+	                android:ems="10"
+	                android:hint="Ville"
+	                android:inputType="text" />
+
+	            <TextView
+	                android:id="@+id/editTextStreet"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_toRightOf="@+id/imageViewAdresse"
+	                 android:layout_below="@+id/editTextVille"
+	                 android:layout_marginLeft="10dp"
+	                android:ems="10"
+	                android:hint="Rue"
+	                android:inputType="text" />
+
+	            <TextView
+	                android:id="@+id/editTextPostalCode"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_toRightOf="@+id/imageViewAdresse"
+	                 android:layout_below="@+id/editTextStreet"
+	                 android:layout_marginLeft="10dp"
+	                android:ems="10"
+	                android:hint="Code Postal"
+	                android:inputType="number" />
+
+	            
+
+	        </RelativeLayout>
+
+	        <RelativeLayout
+	            android:id="@+id/relativeLayout2"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerHorizontal="true"
+	            android:layout_marginTop="420dp"
+	            android:orientation="vertical" >
+
+	            <Button
+	                android:id="@+id/buttonChange"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_toRightOf="@+id/buttonSave"
+	                android:text="Modifier" />
+	        </RelativeLayout>
+
+
+
+	    </RelativeLayout>
+
 	</ScrollView>
 </LinearLayout>

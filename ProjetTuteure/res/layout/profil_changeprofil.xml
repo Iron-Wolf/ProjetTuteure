@@ -39,128 +39,164 @@
 	    <RelativeLayout
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginRight="5dp"
 	        android:orientation="vertical" >
 	        
-	        <Button
-	            android:id="@+id/button1"
-	            android:layout_width="wrap_content"
+	        <RelativeLayout
+	            android:id="@+id/relativeLayout1"
+	            android:layout_width="match_parent"
 	            android:layout_height="wrap_content"
-	            android:layout_alignParentBottom="true"
-	            android:layout_alignRight="@+id/editText8"
-	            android:text="Enregistrer" />
-	
-	        <EditText
-	            android:id="@+id/editText09"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_alignParentLeft="true"
-	            android:layout_below="@+id/textView1"
-	            android:layout_marginTop="16dp"
-	            android:ems="10"
-	            android:hint="Pays"
-	            android:inputType="text" />
-	
-	        <EditText
-	            android:id="@+id/editText7"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_alignParentLeft="true"
-	            android:layout_below="@+id/editText09"
-	            android:ems="10"
-	            android:hint="Ville"
-	            android:inputType="text" />
-	
-	        <EditText
-	            android:id="@+id/editText6"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_alignParentLeft="true"
-	            android:layout_below="@+id/editText7"
-	            android:ems="10"
-	            android:hint="Rue"
-	            android:inputType="text" />
-	
-	        <EditText
-	            android:id="@+id/editText8"
-	            android:layout_width="152dp"
-	            android:layout_height="wrap_content"
-	            android:layout_alignParentLeft="true"
-	            android:layout_below="@+id/editText6"
-	            android:ems="10"
-	            android:hint="Code Postal"
-	            android:inputType="number" />
-	
-	        <EditText
-	            android:id="@+id/editText5"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_alignParentLeft="true"
-	            android:layout_below="@+id/editTextLogin"
-	            android:ems="10"
-	            android:hint="Mail"
-	            android:inputType="textEmailAddress" />
-	
-	        <EditText
-	            android:id="@+id/editText4"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_alignParentLeft="true"
-	            android:layout_below="@+id/editText5"
-	            android:ems="10"
-	            android:hint="Prénom"
-	            android:inputType="text" />
-	
-	        <EditText
-	            android:id="@+id/editText3"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_alignParentLeft="true"
-	            android:layout_below="@+id/editText4"
-	            android:ems="10"
-	            android:hint="Nom"
-	            android:inputType="text" />
-	
-	        <TextView
-	            android:id="@+id/textView1"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_alignLeft="@+id/button1"
-	            android:layout_below="@+id/editText3"
-	            android:layout_marginLeft="28dp"
-	            android:layout_marginTop="79dp"
-	            android:text="Adresse" />
-	
-	        <EditText
-	            android:id="@+id/editText2"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_alignBottom="@+id/textView1"
-	            android:layout_alignParentLeft="true"
-	            android:layout_marginBottom="38dp"
-	            android:ems="10"
-	            android:hint="Question secrète"
-	            android:inputType="text" />
-	
-	
-	
-	        <Button
-	            android:id="@+id/button2"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_alignParentBottom="true"
-	            android:text="Modifier" />
-	
-	        <EditText
-	            android:id="@+id/editTextLogin"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_alignParentLeft="true"
-	            android:layout_alignParentTop="true"
-	            android:layout_marginTop="35dp"
-	            android:ems="10"
-	            android:hint="Login"
-	            android:inputType="text" />
+	            android:layout_marginTop="5dp"
+	            android:orientation="vertical" >
+	        
 
-    	</RelativeLayout>
+	        <ImageView
+	                android:id="@+id/imageViewProfil"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_marginTop="10dp"
+	                android:src="@android:drawable/ic_menu_myplaces" />
+	        
+	         <EditText
+	                android:id="@+id/editTextLogin"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_toRightOf="@+id/imageViewProfil"
+	                android:layout_alignBottom="@+id/imageViewProfil"
+	                android:layout_marginTop="10dp"
+	                android:ems="10"
+	                android:hint="Login"
+	                android:inputType="text" />
+
+	            <EditText
+	                android:id="@+id/editTextFirstName"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_toRightOf="@+id/imageViewProfil"
+	                android:layout_below="@+id/editTextLogin"
+	                android:ems="10"
+	                android:hint="Prénom"
+	                android:inputType="text" />
+
+	            <EditText
+	                android:id="@+id/editTextSecondName"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_toRightOf="@+id/imageViewProfil"
+	                android:layout_below="@+id/editTextFirstName"
+	                android:ems="10"
+	                android:hint="Nom"
+	                android:inputType="text" />
+
+	            <EditText
+	                android:id="@+id/editTextMail"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_toRightOf="@+id/imageViewProfil"
+	                android:layout_below="@+id/editTextSecondName"
+	                android:ems="10"
+	                android:hint="Mail"
+	                android:inputType="textEmailAddress" />
+	        
+	            
+	            
+	            
+	            <ImageView
+	                android:id="@+id/imageViewQuestion"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+					android:layout_marginTop="15dp"
+	                android:src="@android:drawable/ic_menu_help"
+	                android:layout_below="@+id/editTextMail" />
+
+	            <EditText
+	                android:id="@+id/editTextSecretQuestion"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_toRightOf="@+id/imageViewQuestion"
+	                android:layout_below="@+id/editTextMail"
+	                android:layout_alignBottom="@+id/imageViewQuestion"
+	                android:layout_marginTop="10dp"
+	                android:ems="10"
+	                android:hint="Question secrète"
+	                android:inputType="text" />
+
+
+	            
+	            
+
+	            <ImageView
+	                android:id="@+id/imageViewAdresse"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_below="@+id/editTextSecretQuestion"
+	                android:layout_marginTop="20dp"
+	                android:src="@android:drawable/ic_menu_call" />
+
+	            <EditText
+	                android:id="@+id/editTextPays"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_toRightOf="@+id/imageViewAdresse"
+	                android:layout_below="@+id/editTextSecretQuestion"
+	                android:layout_alignBottom="@+id/imageViewAdresse"
+	                android:layout_marginTop="15dp"
+	                android:ems="10"
+	                android:hint="Pays"
+	                android:inputType="text" />
+
+	            <EditText
+	                android:id="@+id/editTextVille"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_toRightOf="@+id/imageViewAdresse"
+	                android:layout_below="@+id/editTextPays"
+	                android:ems="10"
+	                android:hint="Ville"
+	                android:inputType="text" />
+
+	            <EditText
+	                android:id="@+id/editTextStreet"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_toRightOf="@+id/imageViewAdresse"
+	                 android:layout_below="@+id/editTextVille"
+	                android:ems="10"
+	                android:hint="Rue"
+	                android:inputType="text" />
+
+	            <EditText
+	                android:id="@+id/editTextPostalCode"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_toRightOf="@+id/imageViewAdresse"
+	                 android:layout_below="@+id/editTextStreet"
+	                android:ems="10"
+	                android:hint="Code Postal"
+	                android:inputType="number" />
+
+	            
+
+	        </RelativeLayout>
+
+	        <RelativeLayout
+	            android:id="@+id/relativeLayout2"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerHorizontal="true"
+	            android:layout_marginTop="420dp"
+	            android:orientation="vertical" >
+
+	            <Button
+	                android:id="@+id/buttonSave"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="Enregistrer" />
+
+	        </RelativeLayout>
+
+	    </RelativeLayout>
+
 	</ScrollView>
 </LinearLayout>

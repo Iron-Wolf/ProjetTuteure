@@ -14,6 +14,8 @@
 	    <RelativeLayout
 	        android:layout_width="match_parent"
 	        android:layout_height="match_parent"
+	        android:layout_marginLeft="5dp"
+		    android:layout_marginRight="5dp"
 	        android:orientation="vertical" >
 	        
 	        <Button
@@ -22,7 +24,7 @@
 	            android:layout_height="wrap_content"
 	            android:layout_alignParentTop="true"
 	            android:layout_centerHorizontal="true"
-	            android:layout_marginTop="18dp"
+	            android:layout_marginTop="10dp"
 	            android:text="Ajouter des contacts"
 	            android:onClick="showDialogAddFriends" />
 	        
@@ -36,10 +38,10 @@
 	        <RelativeLayout 
 	            android:layout_width="match_parent"
 		       	android:layout_height="wrap_content"
-		       	 android:layout_below="@+id/buttonAddFriends"
+		       	android:layout_below="@+id/buttonAddFriends"
 		        android:layout_marginTop="20dp"
-		        android:layout_marginLeft="10dp"
-		        android:layout_marginRight="10dp">
+		        android:layout_marginLeft="5dp"
+		        android:layout_marginRight="5dp">
         
 		        <ImageView
 		            android:id="@+id/imageViewImage"
@@ -48,7 +50,7 @@
 		            android:layout_alignParentLeft="true"
 		            android:layout_below="@+id/button1"
 		            android:layout_marginLeft="14dp"
-		            android:layout_marginTop="30dp"
+		            android:layout_marginTop="0dp"
 		            android:src="@drawable/ic_launcher" />
 		
 		        <TextView
@@ -71,24 +73,33 @@
 		            android:layout_toRightOf="@+id/textViewFirstName"
 		            android:text="Nom"
 		            android:textAppearance="?android:attr/textAppearanceMedium" />
+		        
 
 		        <TextView
 		            android:id="@+id/textViewDistance"
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
+		            android:layout_alignBottom="@+id/imageViewImage"
 		            android:layout_alignLeft="@+id/textViewFirstName"
-		            android:layout_alignParentBottom="true"
 		            android:text="Distance (en m)"
 		            android:textAppearance="?android:attr/textAppearanceSmall" />
 
-		        <EditText
-		            android:id="@+id/editText1"
+		       <EditText
+		            android:id="@+id/editTextDistance"
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
-		            android:layout_alignParentBottom="true"
+		            android:layout_below="@+id/textView2"
 		            android:layout_toRightOf="@+id/textViewDistance"
 		            android:ems="5"
 		            android:inputType="number" />
+		            
+		        <View
+					android:layout_width="fill_parent"
+		       		android:layout_height="1px"
+		       		android:layout_below="@+id/imageViewImage"
+		       		android:layout_marginTop="20dp"
+		        	android:background="#FF909090" />
+
 
 
 			</RelativeLayout>

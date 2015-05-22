@@ -19,37 +19,36 @@
 		android:layout_marginRight="10dp"
 		android:gravity="center" >
         
+       <RelativeLayout 
+	            android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	       	 	android:orientation="vertical"
+	        	android:layout_centerHorizontal="true">
+	        	
         <Button
             android:id="@+id/buttonWaitResponse"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
             android:layout_alignParentTop="true"
-            android:layout_toLeftOf="@+id/TextViewTest"
             android:text="Non répondu" />
-        
-        <TextView
-	       android:id="@+id/TextViewTest"
-	       android:layout_width="wrap_content"
-	       android:layout_height="wrap_content"
-	       android:layout_alignParentTop="true"
-	       android:layout_centerHorizontal="true" />
         
         <Button
             android:id="@+id/buttonHistory"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/TextViewTest"
+            android:layout_toRightOf="@+id/buttonWaitResponse"
             android:layout_marginTop="0dp"
             android:layout_marginRight="20dp"
             android:text="Historique" />
         
+        </RelativeLayout>
         
+
        <View
 			android:layout_width="fill_parent"
        		android:layout_height="1px"
-       		android:layout_below="@+id/buttonHistory"
-       		android:layout_marginTop="10dp"
+       		android:layout_marginTop="60dp"
         	android:background="#FF909090" />
        
 
