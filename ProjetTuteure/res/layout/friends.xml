@@ -25,8 +25,7 @@
 	            android:layout_alignParentTop="true"
 	            android:layout_centerHorizontal="true"
 	            android:layout_marginTop="10dp"
-	            android:text="Ajouter des contacts"
-	            android:onClick="showDialogAddFriends" />
+	            android:text="Ajouter des contacts"/>
 	        
 	        <View
 				android:layout_width="fill_parent"

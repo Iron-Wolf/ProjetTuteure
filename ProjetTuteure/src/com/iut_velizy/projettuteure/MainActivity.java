@@ -1,10 +1,7 @@
 package com.iut_velizy.projettuteure;
 
 import com.iut_velizy.dao.Initialisation;
-import com.iut_velizy.dialogCustom.MyDialogAddFriends;
-
 import android.app.ActionBar;
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ActionBar.Tab;
 import android.content.Context;
@@ -14,10 +11,6 @@ import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Message;
 import android.support.v4.app.FragmentActivity;
-import android.view.View;
-import android.view.ViewGroup;
-import android.view.Window;
-import android.widget.LinearLayout;
 
 public class MainActivity extends FragmentActivity 
 {
@@ -117,10 +110,4 @@ public class MainActivity extends FragmentActivity
     	// mettre à jour les vues
     	
     }
-	
-	public void showDialogAddFriends(View view)
-	{
-		MyDialogAddFriends newF = new MyDialogAddFriends();
-		newF.show(getFragmentManager(), "dialog");
-	}
 }

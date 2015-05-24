@@ -16,7 +16,6 @@ import android.util.Log;
 /**
  * Classe appelée à chaque fois que le main activity prend le focus.<br/>
  * L'appli n'a qu'une activitée donc l'appel est fait au démarrage.
- * @author Iron-Wolf
  *
  */
 public class Initialisation extends AsyncTask<Void, Void, String>
