@@ -8,10 +8,12 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
 
 import com.iut_velizy.projettuteure.Profil;
+import com.iut_velizy.projettuteure.R;
 
 import android.app.FragmentTransaction;
 import android.os.AsyncTask;
 import android.util.Log;
+import android.widget.TextView;
 
 /**
  * Appel à la base de données pour la vue <i>Profil</i>
@@ -54,8 +56,10 @@ public class ProfilDAO extends AsyncTask<Void, Void, String>
 	@Override
     protected void onPostExecute(String result)
 	{
-		//après l'exécution, on récupère le JSON
-        profil.jsonData = result;
+		//après l'exécution
+		//mise à jour des TextView en fonction des données
+        TextView tvLogin = (TextView)profil.getView().findViewById(R.id.editTextLogin);
+    	tvLogin.setText(tvLogin.getText() + " : " + result);
     }
 	
 	public String getJsonData()

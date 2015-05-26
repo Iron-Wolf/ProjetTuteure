@@ -14,12 +14,12 @@ import android.widget.TextView;
 
 public class Profil extends Fragment
 {
-	public String jsonData;
+	private View view;
 	
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.profil, container, false);
+        view = inflater.inflate(R.layout.profil, container, false);
     	
     	//on récupère le bouton et on lui attribut un Listener
     	Button buttonModifier = (Button) view.findViewById(R.id.buttonChange);
@@ -35,10 +35,13 @@ public class Profil extends Fragment
     	
     	//initialisation de la vue en fonction de la base de donnés
     	ProfilDAO db = new ProfilDAO(this);
-    	db.execute(); //récupération des données, dans l'objet jsonData
-    	TextView tvLogin = (TextView)view.findViewById(R.id.editTextLogin);
-    	tvLogin.setText(tvLogin.getText() + " : " + jsonData);
+    	db.execute(); //récupération des données et mise à jour de la vue
     	
         return (LinearLayout) view;
+    }
+    
+    public View getView()
+    {
+    	return view;
     }
 }
