@@ -1,15 +1,21 @@
 package com.iut_velizy.projettuteure;
 
+import com.iut_velizy.dao.ProfilDAO;
+
 import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 public class Profil extends Fragment
 {
+	public String jsonData;
+	
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
@@ -26,6 +32,12 @@ public class Profil extends Fragment
     			newF.show(getFragmentManager(), "dialog");
             }
         });
+    	
+    	//initialisation de la vue en fonction de la base de donnés
+    	ProfilDAO db = new ProfilDAO(this);
+    	db.execute(); //récupération des données, dans l'objet jsonData
+    	TextView tvLogin = (TextView)view.findViewById(R.id.editTextLogin);
+    	tvLogin.setText(tvLogin.getText() + " : " + jsonData);
     	
         return (LinearLayout) view;
     }

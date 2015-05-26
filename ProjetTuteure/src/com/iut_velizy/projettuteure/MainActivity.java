@@ -1,6 +1,7 @@
 package com.iut_velizy.projettuteure;
 
 import com.iut_velizy.dao.Initialisation;
+
 import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.app.ActionBar.Tab;
@@ -11,10 +12,13 @@ import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Message;
 import android.support.v4.app.FragmentActivity;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends FragmentActivity 
 {
- 
+	
     @Override
     public void onCreate(Bundle savedInstanceState) 
     {
@@ -47,7 +51,7 @@ public class MainActivity extends FragmentActivity
         tab.setTabListener(tl2);
         actionBar.addTab(tab);
                 
-        // Onglet 4 : Amis proches //
+        // Onglet 3 : Amis proches //
         String labelNearFriends = getResources().getString(R.string.labelNearFriends);
         tab = actionBar.newTab();
         tab.setText(labelNearFriends);
@@ -55,7 +59,7 @@ public class MainActivity extends FragmentActivity
         tab.setTabListener(tl4);
         actionBar.addTab(tab);
         
-        // Onglet 5 : Amis //
+        // Onglet 4 : Amis //
         String labelFriends = getResources().getString(R.string.labelFriends);
         tab = actionBar.newTab();
         tab.setText(labelFriends);
@@ -63,14 +67,13 @@ public class MainActivity extends FragmentActivity
         tab.setTabListener(tl5);
         actionBar.addTab(tab);
         
-        // Onglet 6 : Profil //
+        // Onglet 5 : Profil //
         String labelProfil = getResources().getString(R.string.labelProfil);
         tab = actionBar.newTab();
         tab.setText(labelProfil);
         TabListener<Profil> tl6 = new TabListener<Profil>(this, labelProfil, Profil.class);
         tab.setTabListener(tl6);
         actionBar.addTab(tab);
-        
     }
     
     @Override
@@ -108,6 +111,5 @@ public class MainActivity extends FragmentActivity
     public void populate(String data)
     {
     	// mettre à jour les vues
-    	
     }
 }

@@ -5,31 +5,6 @@
     android:layout_height="wrap_content"
     android:orientation="vertical" >
     
-    <RelativeLayout 
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="5dp"
-        android:orientation="vertical" >
-        
-        <ImageButton
-			android:id="@+id/imageButtonRetour"
-			android:layout_width="30dp"
-			android:layout_height="30dp"
-			android:src="@drawable/flecheretour"
-			android:background="@null" />
-
-        <TextView
-            android:id="@+id/textViewPageTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/imageButtonRetour"
-            android:layout_centerHorizontal="true"
-            android:text="Modifier le profil"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    </RelativeLayout>
 
     <ScrollView 
     	android:layout_width="fill_parent"
@@ -37,10 +12,11 @@
     	android:scrollbars = "vertical">
     
 	    <RelativeLayout
+	        android:id="@+id/relativeLayoutPrincipal"
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
-	        android:layout_marginLeft="5dp"
-	        android:layout_marginRight="5dp"
+	        android:layout_marginLeft="0dp"
+	        android:layout_marginRight="0dp"
 	        android:orientation="vertical" >
 	        
 	        <RelativeLayout
@@ -48,29 +24,18 @@
 	            android:layout_width="match_parent"
 	            android:layout_height="wrap_content"
 	            android:layout_centerHorizontal="true"
-	            android:layout_marginTop="5dp"
+	            android:layout_marginTop="0dp"
 	            android:orientation="vertical" >
 
 	            
 	        <ImageView
 	            android:id="@+id/imageViewImage"
 	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-				android:layout_marginTop="10dp"
-	            android:src="@android:drawable/ic_menu_gallery" />
+	            android:layout_height="215dp"
+				android:layout_marginTop="0dp"
+	            android:src="@drawable/ic_launcher"
+	            android:layout_centerHorizontal="true" />
 	        
-	        <TextView
-	                android:id="@+id/editTextImage"
-	                android:layout_width="wrap_content"
-	                android:layout_height="wrap_content"
-	                android:layout_toRightOf="@+id/imageViewImage"
-	                android:layout_alignTop="@+id/imageViewImage"
-	                android:layout_marginLeft="10dp"
-	                android:ems="10"
-	                android:hint="image"
-	                android:inputType="text" />
-	            
-	            
 	            
 	            
 	        <ImageView
@@ -82,25 +47,37 @@
 	                android:src="@android:drawable/ic_menu_myplaces" />
 	        
 	         <TextView
-	                android:id="@+id/editTextLogin"
+	                android:id="@+id/editTextProfil"
 	                android:layout_width="wrap_content"
 	                android:layout_height="wrap_content"
 	                android:layout_toRightOf="@+id/imageViewProfil"
 	                android:layout_alignTop="@+id/imageViewProfil"
 	                android:layout_marginLeft="10dp"
 	                android:ems="10"
-	                android:hint="Login"
+	                android:text="Profil"
+	                android:textAppearance="?android:attr/textAppearanceMedium"
 	                android:inputType="text" />
 
+	         <TextView
+	                android:id="@+id/editTextLogin"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_toRightOf="@+id/imageViewProfil"
+	                android:layout_below="@+id/editTextProfil"
+	                android:layout_marginLeft="20dp"
+	                android:ems="10"
+	                android:text="Login"
+	                android:inputType="text" />
+	         
 	            <TextView
 	                android:id="@+id/editTextFirstName"
 	                android:layout_width="wrap_content"
 	                android:layout_height="wrap_content"
 	                android:layout_toRightOf="@+id/imageViewProfil"
 	                android:layout_below="@+id/editTextLogin"
-	                android:layout_marginLeft="10dp"
+	                android:layout_marginLeft="20dp"
 	                android:ems="10"
-	                android:hint="Prénom"
+	                android:text="Prénom"
 	                android:inputType="text" />
 
 	            <TextView
@@ -109,9 +86,9 @@
 	                android:layout_height="wrap_content"
 	                android:layout_toRightOf="@+id/imageViewProfil"
 	                android:layout_below="@+id/editTextFirstName"
-	                android:layout_marginLeft="10dp"
+	                android:layout_marginLeft="20dp"
 	                android:ems="10"
-	                android:hint="Nom"
+	                android:text="Nom"
 	                android:inputType="text" />
 
 	            <TextView
@@ -120,9 +97,9 @@
 	                android:layout_height="wrap_content"
 	                android:layout_toRightOf="@+id/imageViewProfil"
 	                android:layout_below="@+id/editTextSecondName"
-	                android:layout_marginLeft="10dp"
+	                android:layout_marginLeft="20dp"
 	                android:ems="10"
-	                android:hint="Mail"
+	                android:text="Mail"
 	                android:inputType="textEmailAddress" />
 	        
 	            
@@ -135,27 +112,50 @@
 	                android:layout_below="@+id/editTextMail"
 	                android:layout_marginTop="20dp"
 	                android:src="@android:drawable/ic_dialog_map" />
+	            
+	            <TextView
+	                android:id="@+id/editTextAdresse"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_toRightOf="@+id/imageViewAdresse"
+	                android:layout_alignTop="@+id/imageViewAdresse"
+	                android:layout_marginLeft="10dp"
+	                android:ems="10"
+	                android:text="Adresse"
+	                android:textAppearance="?android:attr/textAppearanceMedium"
+	                android:inputType="text" />
 
 	            <TextView
 	                android:id="@+id/editTextPays"
 	                android:layout_width="wrap_content"
 	                android:layout_height="wrap_content"
-	                android:layout_alignTop="@+id/imageViewAdresse"
+	                android:layout_below="@+id/editTextAdresse"
 	                android:layout_toRightOf="@+id/imageViewAdresse"
-	                android:layout_marginLeft="10dp"
+	                android:layout_marginLeft="20dp"
 	                android:ems="10"
-	                android:hint="Pays"
+	                android:text="Pays"
 	                android:inputType="text" />
+	            
+	            <TextView
+	                android:id="@+id/editTextPostalCode"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_toRightOf="@+id/imageViewAdresse"
+	                android:layout_below="@+id/editTextPays"
+	                android:layout_marginLeft="20dp"
+	                android:ems="10"
+	                android:text="Code Postal"
+	                android:inputType="number" />
 
 	            <TextView
 	                android:id="@+id/editTextVille"
 	                android:layout_width="wrap_content"
 	                android:layout_height="wrap_content"
 	                android:layout_toRightOf="@+id/imageViewAdresse"
-	                android:layout_below="@+id/editTextPays"
-	                android:layout_marginLeft="10dp"
+	                android:layout_below="@+id/editTextPostalCode"
+	                android:layout_marginLeft="20dp"
 	                android:ems="10"
-	                android:hint="Ville"
+	                android:text="Ville"
 	                android:inputType="text" />
 
 	            <TextView
@@ -164,44 +164,23 @@
 	                android:layout_height="wrap_content"
 	                android:layout_toRightOf="@+id/imageViewAdresse"
 	                 android:layout_below="@+id/editTextVille"
-	                 android:layout_marginLeft="10dp"
+	                 android:layout_marginLeft="20dp"
 	                android:ems="10"
-	                android:hint="Rue"
+	                android:text="Rue"
 	                android:inputType="text" />
 
-	            <TextView
-	                android:id="@+id/editTextPostalCode"
-	                android:layout_width="wrap_content"
-	                android:layout_height="wrap_content"
-	                android:layout_toRightOf="@+id/imageViewAdresse"
-	                 android:layout_below="@+id/editTextStreet"
-	                 android:layout_marginLeft="10dp"
-	                android:ems="10"
-	                android:hint="Code Postal"
-	                android:inputType="number" />
-
 	            
-
-	        </RelativeLayout>
-
-	        <RelativeLayout
-	            android:id="@+id/relativeLayout2"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_centerHorizontal="true"
-	            android:layout_marginTop="420dp"
-	            android:orientation="vertical" >
 
 	            <Button
 	                android:id="@+id/buttonChange"
 	                android:layout_width="wrap_content"
 	                android:layout_height="wrap_content"
-	                android:layout_toRightOf="@+id/buttonSave"
+	                android:layout_below="@+id/editTextStreet"
+	                android:layout_marginTop="20dp"
+	                android:layout_centerHorizontal="true"
 	                android:text="Modifier" />
+
 	        </RelativeLayout>
-
-
-
 	    </RelativeLayout>
 
 	</ScrollView>
