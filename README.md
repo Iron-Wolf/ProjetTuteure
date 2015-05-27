@@ -20,6 +20,7 @@ Sur votre projet, faites __clic droit__ > __Show In__ > __History__.
 
 3. Récupérer le code d'un commit.  
 Sur votre projet, faites __clic droit__ > __Replace With__ > __Commit...__.  
+Autre méthode : __clic droit__ > __team__ > __synchronize workspace__. Dans la fenêtre, cliquer sur __pull__.  
    * Attention, cela supprime tout les changement non sauvegardés.  
 
 
