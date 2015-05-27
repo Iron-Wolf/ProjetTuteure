@@ -34,4 +34,5 @@ Sur le commit, dans la vue *history* : __Clic droit__ > __Rebase on__.
 ## Liens
 * [~~créer un nouveau projet GitHub sous Eclipse~~](http://www.throrinstudio.com/dev/creer-un-nouveau-projet-github-sous-eclipse/)  
 * [Article ultra complet sur GIT dans Eclipse](http://www.vogella.com/tutorials/EclipseGit/article.html)
+* [tuto/explication sur la classe AsyncTask](http://olegoaer.developpez.com/tutos/mobile/android/rpc/#LII-B)
 * [Savoir rédigez en markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
