@@ -27,6 +27,19 @@ public class CreateEvent extends Fragment
             }
         });
     	
+    	
+    	//second event
+    	Button buttonOrganisation = (Button) view.findViewById(R.id.buttonOrganise);
+    	buttonOrganisation.setOnClickListener(new View.OnClickListener()
+    	{
+    		@Override
+    		public void onClick(View v) {
+    			//affiche la fenêtre de gestion d'un evenement
+    			Organize newF = new Organize();
+    			newF.show(getFragmentManager(), "dialog");
+            }
+        });
+    	
         return (LinearLayout) view;
     }
     

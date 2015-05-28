@@ -1,6 +1,7 @@
 package com.iut_velizy.projettuteure;
 
 import com.iut_velizy.dao.Initialisation;
+import com.iut_velizy.localStorage.LocalSettings;
 
 import android.app.ActionBar;
 import android.app.AlertDialog;
@@ -12,9 +13,6 @@ import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Message;
 import android.support.v4.app.FragmentActivity;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
 
 public class MainActivity extends FragmentActivity 
 {
@@ -80,6 +78,13 @@ public class MainActivity extends FragmentActivity
     public void onStart()
     {
     	super.onStart();
+    	
+    	//TEST : sauvegarde / récupération de données dans fichier local
+    	LocalSettings ls = new LocalSettings();
+    	//ls.WriteSettings(this,"setting0, setting1, setting2");
+    	//String data[] = ls.ReadSettings(this).split(",");
+    	
+    	
     	
     	//test si le smartphone est connecté à internet
     	ConnectivityManager connMgr = (ConnectivityManager) 
