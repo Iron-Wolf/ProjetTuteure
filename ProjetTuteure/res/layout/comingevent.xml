@@ -11,36 +11,36 @@
     	android:layout_height="fill_parent"
     	android:scrollbars = "vertical">
     	
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-		android:layout_marginLeft="10dp"
-		android:layout_marginRight="10dp"
-		android:gravity="center" >
+	    <RelativeLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+			android:gravity="center" >
         
-       <RelativeLayout 
+       		<RelativeLayout 
 	            android:layout_width="wrap_content"
 	        	android:layout_height="wrap_content"
 	       	 	android:orientation="vertical"
 	        	android:layout_centerHorizontal="true">
 	        	
-        <Button
-            android:id="@+id/buttonWaitResponse"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:layout_alignParentTop="true"
-            android:text="Non répondu" />
-        
-        <Button
-            android:id="@+id/buttonHistory"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/buttonWaitResponse"
-            android:layout_marginTop="0dp"
-            android:layout_marginRight="20dp"
-            android:text="Historique" />
+		        <Button
+		            android:id="@+id/buttonWaitResponse"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginRight="5dp"
+		            android:text="Non répondu" 
+		            android:background="@drawable/button_selector"/>
+		        
+		        <Button
+		            android:id="@+id/buttonHistory"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="5dp"
+		            android:layout_toRightOf="@+id/buttonWaitResponse"
+		            android:text="Historique"
+		            android:background="@drawable/button_selector" />
         
         </RelativeLayout>
         
@@ -81,18 +81,24 @@
 		       		android:layout_marginTop="10dp"
 		        	android:background="#FF909090" />
 
-		         <ImageButton
-		             android:id="@+id/buttonMaps"
-		             android:layout_width="40dp"
-		             android:layout_height="40dp"
-		             android:layout_alignBottom="@+id/textViewEventAddress"
-		             android:layout_alignParentRight="true"
-		             android:layout_marginRight="30dp"
-		             android:src="@drawable/google_maps_icon" />
+		         <RelativeLayout 
+		            android:id="@+id/relativeLayoutImage"
+		            android:layout_width="match_parent"
+		            android:layout_height="match_parent"
+		            android:orientation="vertical" 
+		            android:layout_alignBottom="@+id/textViewEventAddress">
+
+			         <ImageButton
+			             android:id="@+id/buttonMaps"
+			             android:layout_width="40dp"
+			             android:layout_height="wrap_content"
+			             android:layout_alignParentRight="true"
+			             android:layout_marginRight="20dp"
+			             android:src="@drawable/google_maps_icon" />
 
         	</RelativeLayout>
 
-
+	</RelativeLayout>
 
     	</RelativeLayout>
 	</ScrollView>

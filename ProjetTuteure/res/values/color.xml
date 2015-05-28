@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Couleur de fond des boutons  -->
+    <color name="light_blue">#3ec8fb</color>
+    
+    <!-- Couleur de fond des boutons après pression  -->
+	<color name="dark_blue">#32A3CC</color>
+	
+	<!-- fond header + image profil  -->
+	<color name="bg_profil_blue">#BCDFFF</color>
+	
+	<!-- couleur des textView  -->
+	<color name="text_blue">#0077cb</color> 
+	
+	<!--   -->
+</resources>

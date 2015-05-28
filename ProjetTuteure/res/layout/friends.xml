@@ -16,6 +16,7 @@
 	        android:layout_height="match_parent"
 	        android:layout_marginLeft="5dp"
 		    android:layout_marginRight="5dp"
+		    android:layout_marginTop="10dp"
 	        android:orientation="vertical" >
 	        
 	        <Button
@@ -24,8 +25,9 @@
 	            android:layout_height="wrap_content"
 	            android:layout_alignParentTop="true"
 	            android:layout_centerHorizontal="true"
-	            android:layout_marginTop="10dp"
-	            android:text="Ajouter des contacts"/>
+	            
+	            android:text="Ajouter des contacts"
+	            android:background="@drawable/button_selector"/>
 	        
 	        <View
 				android:layout_width="fill_parent"
