@@ -2,15 +2,42 @@
 <resources>
 
     <string name="app_name">ProjetTuteure</string>
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
-<!-- Label des onglets -->    
+    
+	<!-- Label des onglets -->    
     <string name="labelCreateEvent"> Créer un évènement </string>
     <string name="labelComingEvent"> Evènements à venir </string>
-    <string name="labelHistory"> Historique </string>
     <string name="labelNearFriends"> Amis proches </string>
     <string name="labelFriends"> Amis</string>
-    <string name="labelProfil">Profil</string>
+    <string name="labelProfil"> Profil</string>
+    <string name="labelAPropos"> A propos </string>
 
+    
+    <!-- Textes boutons -->
+    
+    
+    
+    
+    <!-- Textes A Propos -->
+    <string name="titleGoal"> But de l onglet </string>
+    <string name="textGoal"> Le but de cette onglet est d apprendre à vous servir de l application. </string>
+    
+    <string name="titleCreateEvent"> Créer un évènement </string>
+    <string name="textCreateEvent"> Pour créer un évènement il suffit de. </string>
+    
+    <string name="titleComingEvent"> Evènements à venir </string>
+    <string name="textComingEvent"> Liste les évènements à venir </string>
+    
+    <string name="titleNearFriends"> Amis proches </string>
+    <string name="textNearFriends"> Prochainement disponible </string>
+    
+    <string name="titleFriends"> Amis </string>
+    <string name="textFriends"> Liste de vos amis </string>
+    
+    <string name="titleProfil"> Profil </string>
+    <string name="textProfil"> Votre profil </string>
+    
+    
+    
 </resources>

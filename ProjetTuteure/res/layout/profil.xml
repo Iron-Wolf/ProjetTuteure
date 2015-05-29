@@ -32,10 +32,7 @@
 		        <ImageView
 		            android:id="@+id/imageViewImage"
 		            android:layout_width="wrap_content"
-		            android:layout_height="215dp"
-					android:layout_marginTop="0dp"
-		            android:src="@drawable/google_maps_icon"
-		            android:layout_centerHorizontal="true" />
+		            android:layout_height="215dp"/>
 	        
 	            </RelativeLayout>
 	            

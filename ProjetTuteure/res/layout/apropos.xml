@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+	<ScrollView 
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:scrollbars = "vertical">
+    
+		<RelativeLayout
+	        android:id="@+id/relativeLayoutPrincipal"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical">
+	        
+		    <!-- But  -->
+			<TextView 
+	       		android:id="@+id/editTextTitleGoal"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerHorizontal="true"
+	            android:textColor="@color/text_blue"
+	            android:layout_marginTop="10dp"
+	            android:layout_marginStart="10dp"
+	            android:text="@string/titleGoal"
+	            android:textAppearance="?android:attr/textAppearanceMedium" />
+			
+			<TextView 
+	       		android:id="@+id/editTextTextGoal"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/editTextTitleGoal"
+	            android:text="@string/textGoal"/>
+			
+			<!-- CreateEvent  -->
+			<TextView 
+	       		android:id="@+id/editTextTitleCreateEvent"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/editTextTextGoal"
+	            android:layout_centerHorizontal="true"
+	            android:textColor="@color/text_blue"
+	            android:layout_marginTop="10dp"
+	            android:layout_marginStart="10dp"
+	            android:text="@string/titleCreateEvent"
+	            android:textAppearance="?android:attr/textAppearanceMedium" />
+			
+			<TextView 
+	       		android:id="@+id/editTextTextCreateEvent"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/editTextTitleCreateEvent"
+	            android:text="@string/textCreateEvent" />
+			
+			<!-- ComingEvent  -->
+			<TextView 
+	       		android:id="@+id/editTextTitleComingEvent"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/editTextTextCreateEvent"
+	            android:layout_centerHorizontal="true"
+	            android:textColor="@color/text_blue"
+	            android:layout_marginTop="10dp"
+	            android:layout_marginStart="10dp"
+	            android:text="@string/titleComingEvent"
+	            android:textAppearance="?android:attr/textAppearanceMedium" />
+			
+			<TextView 
+	       		android:id="@+id/editTextTextComingEvent"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/editTextTitleComingEvent"
+	            android:text="@string/textComingEvent" />
+			
+			<!-- NearFriends  -->
+			<TextView 
+	       		android:id="@+id/editTextTitleNearFriends"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/editTextTextComingEvent"
+	            android:layout_centerHorizontal="true"
+	            android:textColor="@color/text_blue"
+	            android:layout_marginTop="10dp"
+	            android:layout_marginStart="10dp"
+	            android:text="@string/titleNearFriends"
+	            android:textAppearance="?android:attr/textAppearanceMedium" />
+			
+			<TextView 
+	       		android:id="@+id/editTextTextNearFriends"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/editTextTitleNearFriends"
+	            android:text="@string/titleNearFriends" />
+			
+			<!-- Friends  -->
+			<TextView 
+	       		android:id="@+id/editTextTitleFriends"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/editTextTextNearFriends"
+	            android:layout_centerHorizontal="true"
+	            android:textColor="@color/text_blue"
+	            android:layout_marginTop="10dp"
+	            android:layout_marginStart="10dp"
+	            android:text="@string/titleFriends"
+	            android:textAppearance="?android:attr/textAppearanceMedium" />
+			
+			<TextView 
+	       		android:id="@+id/editTextTextFriends"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/editTextTitleFriends"
+	            android:text="@string/titleFriends"/>
+			
+			<!-- Profil  -->
+			<TextView 
+	       		android:id="@+id/editTextTitleProfil"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/editTextTextFriends"
+	            android:layout_centerHorizontal="true"
+	            android:textColor="@color/text_blue"
+	            android:layout_marginTop="10dp"
+	            android:layout_marginStart="10dp"
+	            android:text="@string/titleProfil"
+	            android:textAppearance="?android:attr/textAppearanceMedium" />
+			
+			<TextView 
+	       		android:id="@+id/editTextTextProfil"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/editTextTitleProfil"
+	            android:text="@string/titleProfil" />
+			
+
+		</RelativeLayout>   
+	</ScrollView>
+</LinearLayout>

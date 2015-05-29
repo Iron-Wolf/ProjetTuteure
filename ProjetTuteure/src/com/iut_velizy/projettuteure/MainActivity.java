@@ -13,6 +13,7 @@ import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Message;
 import android.support.v4.app.FragmentActivity;
+import android.widget.ImageView;
 
 public class MainActivity extends FragmentActivity 
 {
@@ -72,6 +73,15 @@ public class MainActivity extends FragmentActivity
         TabListener<Profil> tl6 = new TabListener<Profil>(this, labelProfil, Profil.class);
         tab.setTabListener(tl6);
         actionBar.addTab(tab);
+        
+        // Onglet 5 : A propos //
+        String labelAPropos = getResources().getString(R.string.labelAPropos);
+        tab = actionBar.newTab();
+        tab.setText(labelAPropos);
+        TabListener<APropos> tl7 = new TabListener<APropos>(this, labelAPropos, APropos.class);
+        tab.setTabListener(tl6);
+        actionBar.addTab(tab);
+        
     }
     
     @Override
@@ -117,4 +127,11 @@ public class MainActivity extends FragmentActivity
     {
     	// mettre à jour les vues
     }
+    
+    
+ 
+
+    
+    
+    
 }
