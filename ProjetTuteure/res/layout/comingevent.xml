@@ -74,29 +74,23 @@
 		            android:layout_marginTop="10dp"
 		            android:text="Adresse de l&apos;évènement" />
 		        
-		         <View
-					android:layout_width="fill_parent"
-		       		android:layout_height="1px"
-		       		android:layout_below="@+id/textViewEventAddress"
-		       		android:layout_marginTop="10dp"
-		        	android:background="#FF909090" />
 
-		         <RelativeLayout 
-		            android:id="@+id/relativeLayoutImage"
-		            android:layout_width="match_parent"
-		            android:layout_height="match_parent"
-		            android:orientation="vertical" 
-		            android:layout_alignBottom="@+id/textViewEventAddress">
 
 			         <ImageButton
 			             android:id="@+id/buttonMaps"
-			             android:layout_width="40dp"
-			             android:layout_height="wrap_content"
+			             android:layout_width="50dp"
+			             android:layout_height="50dp"
+			             android:background="@null"
 			             android:layout_alignParentRight="true"
-			             android:layout_marginRight="20dp"
+			            android:layout_marginRight="20dp"
 			             android:src="@drawable/google_maps_icon" />
 
-        	</RelativeLayout>
+ 		         <View
+					android:layout_width="fill_parent"
+		       		android:layout_height="1px"
+		       		android:layout_below="@+id/buttonMaps"
+		       		android:layout_marginTop="10dp"
+		        	android:background="#FF909090" />
 
 	</RelativeLayout>
 

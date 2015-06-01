@@ -95,12 +95,41 @@
 	            android:layout_toRightOf="@+id/textViewDateLink"
 	            android:layout_alignBottom="@+id/textViewEventDate"
 	            android:text="hh:mm" />
+            
+            <TextView
+	            android:id="@+id/textViewEventDateLimit"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/textViewEventDate"
+	            android:layout_marginTop="10dp"
+	            android:text="Date limite : "
+	            android:textAppearance="?android:attr/textAppearanceMedium"
+	            android:textColor="@color/text_blue" />
+
+            <TextView
+	            android:id="@+id/textViewDateLimit"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_toRightOf="@+id/textViewEventDateLimit"
+	            android:layout_alignBottom="@+id/textViewEventDateLimit"
+	            android:text="01/01/2000" />
+            
+            <Button
+		            android:id="@+id/buttonHistory"
+		            android:layout_width="wrap_content"
+	            	android:layout_height="25dp"
+		            android:layout_marginLeft="30dp"
+		            
+		            android:layout_toRightOf="@+id/textViewDateLimit"
+		            android:layout_alignBaseline="@+id/textViewEventDateLimit"
+		            android:text="Calculer"
+		            android:background="@drawable/little_button_selector" />
 
             
             <View
 				android:layout_width="fill_parent"
 	       		android:layout_height="1px"
-	       		android:layout_below="@+id/textViewEventDate"
+	       		android:layout_below="@+id/textViewEventDateLimit"
 	       		android:layout_marginTop="15dp"
 	        	android:background="#FF909090" />
             

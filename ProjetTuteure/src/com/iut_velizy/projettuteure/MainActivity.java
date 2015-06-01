@@ -1,11 +1,8 @@
 package com.iut_velizy.projettuteure;
 
-import com.iut_velizy.dao.Initialisation;
-import com.iut_velizy.localStorage.LocalSettings;
-
 import android.app.ActionBar;
-import android.app.AlertDialog;
 import android.app.ActionBar.Tab;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.net.ConnectivityManager;
@@ -13,7 +10,11 @@ import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Message;
 import android.support.v4.app.FragmentActivity;
-import android.widget.ImageView;
+import android.view.Menu;
+import android.view.MenuItem;
+
+import com.iut_velizy.dao.Initialisation;
+import com.iut_velizy.localStorage.LocalSettings;
 
 public class MainActivity extends FragmentActivity 
 {
@@ -74,14 +75,6 @@ public class MainActivity extends FragmentActivity
         tab.setTabListener(tl6);
         actionBar.addTab(tab);
         
-        // Onglet 5 : A propos //
-        String labelAPropos = getResources().getString(R.string.labelAPropos);
-        tab = actionBar.newTab();
-        tab.setText(labelAPropos);
-        TabListener<APropos> tl7 = new TabListener<APropos>(this, labelAPropos, APropos.class);
-        tab.setTabListener(tl6);
-        actionBar.addTab(tab);
-        
     }
     
     @Override
@@ -130,7 +123,27 @@ public class MainActivity extends FragmentActivity
     
     
  
-
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) 
+    {
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+    
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) 
+    {
+        switch (item.getItemId()) 
+        {
+        case R.id.menu_apropos:
+            // Comportement du bouton "A Propos"
+        	APropos newF = new APropos();
+			newF.show(getFragmentManager(), "dialog");
+            return true;
+        default:
+            return super.onOptionsItemSelected(item);
+        }
+    }
     
     
     
