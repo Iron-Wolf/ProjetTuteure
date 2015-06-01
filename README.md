@@ -32,6 +32,17 @@ Sur le commit, dans la vue *history* : __Clic droit__ > __Checkout__.
 Sur le commit, dans la vue *history* : __Clic droit__ > __Rebase on__.  
 
 
+## Google Map
+1. Modifier le fichier *eclipse.ini* :  
+--launcher.XXMaxPermSize 512M (à faire deux fois dans le fichier)  
+-Xms512m  
+-Xmx1024m  
+[lien](https://stackoverflow.com/questions/22282980/unable-to-execute-dex-gc-overhead-limit-exceeded#tab-top)  
+
+2. Configurer Eclipse avec l'API Google Play Service :  
+[par ici] (https://stackoverflow.com/questions/16395495/add-google-maps-to-android-app?answertab=active#tab-top)  
+
+
 ## Liens
 * [~~créer un nouveau projet GitHub sous Eclipse~~](http://www.throrinstudio.com/dev/creer-un-nouveau-projet-github-sous-eclipse/)  
 * [Article ultra complet sur GIT dans Eclipse](http://www.vogella.com/tutorials/EclipseGit/article.html)
