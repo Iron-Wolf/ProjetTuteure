@@ -14,12 +14,11 @@ import android.widget.TextView;
 
 public class Profil extends Fragment
 {
-	private View view;
 	
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.profil, container, false);
+        View view = inflater.inflate(R.layout.profil, container, false);
     	
     	//on récupère le bouton et on lui attribut un Listener
     	Button buttonModifier = (Button) view.findViewById(R.id.buttonChange);
@@ -38,10 +37,5 @@ public class Profil extends Fragment
     	db.execute(); //récupération des données et mise à jour de la vue
     	
         return (LinearLayout) view;
-    }
-    
-    public View getView()
-    {
-    	return view;
     }
 }

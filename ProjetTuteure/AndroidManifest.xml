@@ -6,16 +6,33 @@
 
     <uses-sdk android:minSdkVersion="19"
          android:targetSdkVersion="19" />
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    
+    <!-- Permission pour utiliser la connexion internet -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Permission permettant de vérifier l'état de la connexion -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- Permission pour stocker des données en cache de la map -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true"/>
     
     <application
         android:allowBackup="true"
         android:theme="@style/AppBaseTheme"
         android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
-         >
+        android:label="@string/app_name" >
+        
+         <meta-data
+         android:name="com.google.android.maps.v2.API_KEY"
+         android:value="AIzaSyAFnxO_VllQgDBF6ZCF24jcSkF4U5TE4RY" />
+         <meta-data android:name="com.google.android.gms.version"
+    	android:value="@integer/google_play_services_version" />
+        
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" >

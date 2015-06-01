@@ -140,6 +140,11 @@ public class MainActivity extends FragmentActivity
         	APropos newF = new APropos();
 			newF.show(getFragmentManager(), "dialog");
             return true;
+        case R.id.menu_maptest:
+            // Comportement du bouton "A Propos"
+        	MapTest newF2 = new MapTest();
+			newF2.show(getFragmentManager(), "dialog");
+            return true;
         default:
             return super.onOptionsItemSelected(item);
         }
