@@ -5,7 +5,9 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.MapsInitializer;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 
 import android.app.Dialog;
 import android.app.DialogFragment;
@@ -48,14 +50,34 @@ public class MapTest extends DialogFragment {
         map = mapView.getMap();
         map.getUiSettings().setMyLocationButtonEnabled(false);
         map.setMyLocationEnabled(true);
+        map.getUiSettings().setCompassEnabled(true);
+        map.getUiSettings().setZoomControlsEnabled(true);
 
         // Needs to call MapsInitializer before doing any CameraUpdateFactory calls
         MapsInitializer.initialize(this.getActivity());
 
 
         // Updates the location and zoom of the MapView
-        CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(new LatLng(48.85, 2.35), 10);
-        map.animateCamera(cameraUpdate);
+        
+        /* données recupérées par géocodage en fonction des adresses des amis */
+        LatLng paris = new LatLng(48.85, 2.35);
+        LatLng velizy = new LatLng(48.7840659, 2.1955384);
+        LatLng issy = new LatLng(48.8239654,2.26274);
+        LatLng montrouge = new LatLng(48.815938,2.3162615);
+        
+        /* calcul du barycentre des adresses */
+        double moyLat = (velizy.latitude + issy.latitude + montrouge.latitude) / 3;
+        double moyLong = (velizy.longitude + issy.longitude + montrouge.longitude) / 3;
+        LatLng newLocation = new LatLng(moyLat,moyLong);
+        
+        map.addMarker(new MarkerOptions()
+        .title("Le Titre")
+        .snippet("le snippet")
+        .position(newLocation));
+        
+        CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(newLocation, 12);
+        map.moveCamera(cameraUpdate);
+        //map.animateCamera(cameraUpdate);
 
         return v;
     }
