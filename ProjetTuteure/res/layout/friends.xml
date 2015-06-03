@@ -36,7 +36,14 @@
 	       		android:layout_marginTop="10dp"
 	        	android:background="#FF909090" />
 	        
+	        <TableLayout 
+       		android:id="@+id/tableLayout1"
+       		
+        	android:layout_width="fill_parent"
+        	android:layout_height="fill_parent">
+        	
 	        <RelativeLayout 
+	            android:id="@+id/relativePrincipal"
 	            android:layout_width="match_parent"
 		       	android:layout_height="wrap_content"
 		       	android:layout_below="@+id/buttonAddFriends"
@@ -44,7 +51,7 @@
 		        android:layout_marginLeft="5dp"
 		        android:layout_marginRight="5dp">
         
-		        <ImageView
+		        <!-- ImageView
 		            android:id="@+id/imageViewImage"
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
@@ -99,11 +106,12 @@
 		       		android:layout_height="1px"
 		       		android:layout_below="@+id/imageViewImage"
 		       		android:layout_marginTop="20dp"
-		        	android:background="#FF909090" />
+		        	android:background="#FF909090" /-->
 
 
 
 			</RelativeLayout>
+			</TableLayout>
     	</RelativeLayout>
  	</ScrollView>
 </LinearLayout>

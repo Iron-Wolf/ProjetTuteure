@@ -6,10 +6,7 @@
     android:gravity="center"
     android:orientation="vertical" >
 
-    <ScrollView 
-    	android:layout_width="fill_parent"
-    	android:layout_height="fill_parent"
-    	android:scrollbars = "vertical">
+
     	
 	    <RelativeLayout
 	        android:layout_width="match_parent"
@@ -46,13 +43,39 @@
         
 
        <View
+           android:id="@+id/line"
 			android:layout_width="fill_parent"
        		android:layout_height="1px"
        		android:layout_marginTop="60dp"
         	android:background="#FF909090" />
        
- 
-	   <RelativeLayout 
+     <ScrollView 
+        android:layout_below="@+id/line"
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:scrollbars = "vertical">
+       
+		<TableLayout 
+       		android:id="@+id/tableLayout1"
+       		
+        	android:layout_width="fill_parent"
+        	android:layout_height="fill_parent">
+		   
+    	<RelativeLayout 
+    	    android:id="@+id/relativeComingEvent"
+    	    android:layout_width="match_parent"
+	        android:layout_height="wrap_content"   >
+    	    
+    	</RelativeLayout>  
+		</TableLayout>
+		
+		
+		
+		
+		
+		
+		
+	   <!--RelativeLayout 
 	        android:id="@+id/relativeCommingEvent"
 	   		android:layout_width="match_parent"
 	       	android:layout_height="wrap_content"
@@ -93,8 +116,8 @@
 		       		android:layout_marginTop="10dp"
 		        	android:background="#FF909090" />
 
+			</RelativeLayout-->
+			
+		</ScrollView>
 	</RelativeLayout>
-
-    	</RelativeLayout>
-	</ScrollView>
 </LinearLayout>

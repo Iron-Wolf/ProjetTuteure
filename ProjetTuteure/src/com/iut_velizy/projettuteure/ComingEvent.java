@@ -1,17 +1,19 @@
 package com.iut_velizy.projettuteure;
 
 import android.app.Fragment;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-import android.widget.RelativeLayout.LayoutParams;
-import android.widget.ScrollView;
+import android.widget.TableLayout;
+import android.widget.TableRow;
+import android.widget.TableRow.LayoutParams;
 import android.widget.TextView;
 
 public class ComingEvent extends Fragment
@@ -42,6 +44,7 @@ public class ComingEvent extends Fragment
 
     		RelativeLayout rel = new RelativeLayout(view.getContext());
     		RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+    		
     		params.addRule(RelativeLayout.ALIGN_PARENT_TOP, RelativeLayout.TRUE);
     		TextView tv = new TextView(view.getContext());
     		tv.setText("evenement a venir");
@@ -68,10 +71,72 @@ public class ComingEvent extends Fragment
     		rel.addView(ib);
     		
     		
+    		params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+    		params.addRule(RelativeLayout.ALIGN_PARENT_RIGHT, RelativeLayout.TRUE);
+    		View line = new View(view.getContext());
+    		line.setBackgroundColor(color.black);
+    		line.setMinimumHeight(10);
+    		rel.addView(line);
+    		
+    		
     		rl.addView(rel);
-    	//}
-    	*/
+    	//}*/
+    	
+    	TableLayout tl = (TableLayout) view.findViewById(R.id.tableLayout1);
+			
+		LayoutParams layoutParams = new LayoutParams(LayoutParams.WRAP_CONTENT,	LayoutParams.WRAP_CONTENT);
+		layoutParams.setMargins(2, 2, 2, 2);
+		
+		for(int i = 0; i < 3; i++)
+		{
+			TableRow tr = new TableRow(view.getContext());
+			tr.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
+						
+			LayoutParams event = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+			event.setMargins(2, 40, 2, 2);
+			TextView tv = new TextView(view.getContext());
+    		tv.setText("adresse");
+    		tv.setId(1);
+    		tr.addView(tv, event);
+    		
+    		System.out.println();
+    		
+    		LayoutParams address = new LayoutParams(LayoutParams.WRAP_CONTENT,	LayoutParams.WRAP_CONTENT);
+    		address.setMargins(2, 2, 2, 2);
+			TextView tv2 = new TextView(view.getContext());
+    		tv2.setText("evenement a venir");
+    		tv2.setId(2);
+    		tr.addView(tv2, address);
+			
+    		LayoutParams maps = new LayoutParams(LayoutParams.WRAP_CONTENT,	LayoutParams.WRAP_CONTENT);
+    		maps.setMargins(200, 2, 2, 2);
+    	 	ImageButton ib = new ImageButton(view.getContext());
+    		ib.setImageResource(R.drawable.google_maps_icon);
+    		ib.setBackground(null);
+    		tr.addView(ib, maps);
+			
+    		
+    		tl.addView(tr, layoutParams);
+			
+		}
+		
+
     	
         return (LinearLayout) view;
+        
+        
     }
+    /*
+    public TextView generateTextView(String texte, LayoutParams ly) {
+		TextView result = new TextView(this);
+		result.setBackgroundColor(Color.LTGRAY);
+		result.setTextColor(Color.DKGRAY);
+		result.setGravity(Gravity.CENTER);
+		result.setPadding(2, 2, 2, 2);
+		result.setText(texte);
+		result.setLayoutParams(ly);
+		return result;*/
+    
+    
+	
 }
