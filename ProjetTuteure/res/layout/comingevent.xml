@@ -42,8 +42,8 @@
         </RelativeLayout>
         
 
-       <View
-           android:id="@+id/line"
+		<View
+			android:id="@+id/line"
 			android:layout_width="fill_parent"
        		android:layout_height="1px"
        		android:layout_marginTop="60dp"
@@ -57,16 +57,13 @@
        
 		<TableLayout 
        		android:id="@+id/tableLayout1"
-       		
         	android:layout_width="fill_parent"
-        	android:layout_height="fill_parent">
+        	android:layout_height="fill_parent"
+        	android:layout_marginTop="0dp"
+        	android:background="@drawable/table" 
+        	>
 		   
-    	<RelativeLayout 
-    	    android:id="@+id/relativeComingEvent"
-    	    android:layout_width="match_parent"
-	        android:layout_height="wrap_content"   >
-    	    
-    	</RelativeLayout>  
+    	
 		</TableLayout>
 		
 		
