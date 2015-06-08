@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/layoutAddFriends" >
+
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="vertical"
+        android:background="@color/bg_profil_blue"
+        android:paddingTop="10dp">
+        
+        <ImageButton
+			android:id="@+id/imageButtonRetour"
+			android:layout_marginLeft="5dp"
+			android:layout_width="30dp"
+			android:layout_height="30dp"
+			android:src="@drawable/flecheretour"
+			android:background="@null" />
+
+        <TextView
+            android:id="@+id/textViewPageTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageButtonRetour"
+            android:layout_centerHorizontal="true"
+            android:text="Adresses"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    </RelativeLayout>
+    
+    <ScrollView 
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:scrollbars = "vertical">
+    
+		<RelativeLayout 
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_marginTop="10dp"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp" >
+					
+			<EditText
+	            android:id="@+id/editText"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content" 
+	            android:layout_centerHorizontal="true"
+	            android:ems="10"
+	            android:hint="adresse" 
+	            />
+			<EditText
+	            android:id="@+id/editText2"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content" 
+	            android:layout_centerHorizontal="true"
+	            android:ems="10"
+	            android:hint="adresse" 
+	            android:layout_below="@+id/editText"
+	            />
+			<EditText
+	            android:id="@+id/editText3"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content" 
+	            android:layout_centerHorizontal="true"
+	            android:ems="10"
+	            android:hint="adresse" 
+	            android:layout_below="@+id/editText2"
+	            />
+			<EditText
+	            android:id="@+id/editText4"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content" 
+	            android:layout_centerHorizontal="true"
+	            android:ems="10"
+	            android:hint="adresse" 
+	            android:layout_below="@+id/editText3"
+	            />
+			<EditText
+	            android:id="@+id/editText5"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content" 
+	            android:layout_centerHorizontal="true"
+	            android:ems="10"
+	            android:hint="adresse" 
+	            android:layout_below="@+id/editText4"
+	            />
+			<EditText
+	            android:id="@+id/editText6"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content" 
+	            android:layout_centerHorizontal="true"
+	            android:ems="10"
+	            android:hint="adresse" 
+	            android:layout_below="@+id/editText5"
+	            />
+			
+	
+		
+		</RelativeLayout>
+	</ScrollView>
+	<RelativeLayout 
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_marginTop="10dp"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp" >
+		<Button
+				android:id="@+id/buttonValidation"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerHorizontal="true"
+				android:text="Valider"
+				android:background="@drawable/button_selector"/>
+
+		</RelativeLayout>
+</LinearLayout>
+			

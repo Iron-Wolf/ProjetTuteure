@@ -141,8 +141,8 @@ public class MainActivity extends FragmentActivity
 			newF.show(getFragmentManager(), "dialog");
             return true;
         case R.id.menu_maptest:
-            // Comportement du bouton "A Propos"
-        	MapTest newF2 = new MapTest();
+            // Comportement du bouton "maps"
+        	ConfMaps newF2 = new ConfMaps();
 			newF2.show(getFragmentManager(), "dialog");
             return true;
         default:
