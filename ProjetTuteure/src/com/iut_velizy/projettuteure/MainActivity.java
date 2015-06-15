@@ -144,7 +144,7 @@ public class MainActivity extends FragmentActivity
             return true;
         case R.id.menu_maptest:
             // Comportement du bouton "maps"
-        	ConfMaps newF2 = new ConfMaps();
+        	ConfMapsRapide newF2 = new ConfMapsRapide();
 			newF2.show(getFragmentManager(), "dialog");
             return true;
         default:

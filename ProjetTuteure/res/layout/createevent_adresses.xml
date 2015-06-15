@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/layoutAddFriends" >
+
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="vertical"
+        android:background="@color/bg_profil_blue"
+        android:paddingTop="10dp">
+        
+        <ImageButton
+			android:id="@+id/imageButtonRetour"
+			android:layout_marginLeft="5dp"
+			android:layout_width="30dp"
+			android:layout_height="30dp"
+			android:src="@drawable/flecheretour"
+			android:background="@null" />
+
+        <TextView
+            android:id="@+id/textViewPageTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageButtonRetour"
+            android:layout_centerHorizontal="true"
+            android:text="Adresses"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    </RelativeLayout>
+    
+    <ScrollView 
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:scrollbars = "vertical">
+    
+		<RelativeLayout 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="5dp"
+			android:layout_marginLeft="5dp"
+			android:layout_marginRight="5dp" >
+			
+		    <RelativeLayout 
+		        android:id="@+id/relativeprincipal1"
+		        android:layout_width="wrap_content"
+				android:layout_height="wrap_content">
+				
+		        <TextView 
+	       		android:id="@+id/editTextTitleaddresse1"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerHorizontal="true"
+	            android:textColor="@color/text_blue"
+	            android:text="Adresse 1"
+	            android:textAppearance="?android:attr/textAppearanceMedium"
+	             />
+		        
+		        <EditText
+		            android:id="@+id/editTextVoie1"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentLeft="true"
+		            android:layout_alignParentRight="true"
+		            android:layout_below="@+id/editTextTitleaddresse1"
+		            android:hint="voie1" />
+		        
+			<EditText
+	            android:id="@+id/editTextVille1"
+	            android:layout_width="200dp"
+	            android:layout_height="wrap_content" 
+	            android:layout_below="@+id/editTextVoie1"
+	            android:hint="ville1" />
+			
+			<EditText
+	            android:id="@+id/editTextPays1"
+	            android:layout_width="100dp"
+	            android:layout_height="wrap_content"
+	            android:layout_toRightOf="@+id/editTextVille1"
+	            android:layout_below="@+id/editTextVoie1"
+	            android:hint="pays1" />
+
+			
+		        
+		    </RelativeLayout>
+					
+		    <View
+			android:layout_width="fill_parent"
+       		android:layout_height="1px"
+        	android:background="#FF909090" 
+        	android:layout_marginTop="5dp"
+        	android:layout_below="@+id/relativeprincipal1"/>
+		    
+		    
+		    
+		    <!-- adresse 2 -->
+		    <RelativeLayout 
+		        android:id="@+id/relativeprincipal2"
+		        android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
+				android:layout_below="@+id/relativeprincipal1">
+			
+		        <TextView 
+	       		android:id="@+id/editTextTitleaddresse2"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerHorizontal="true"
+	            android:textColor="@color/text_blue"
+	            android:text="Adresse 1"
+	            android:textAppearance="?android:attr/textAppearanceMedium"
+	             />
+		        
+		        <EditText
+		            android:id="@+id/editTextVoie2"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentLeft="true"
+		            android:layout_alignParentRight="true"
+		            android:layout_below="@+id/editTextTitleaddresse2"
+		            android:hint="voie2" />
+		        
+			<EditText
+	            android:id="@+id/editTextVille2"
+	            android:layout_width="200dp"
+	            android:layout_height="wrap_content" 
+	            android:layout_below="@+id/editTextVoie2"
+	            android:hint="ville1" />
+			
+			<EditText
+	            android:id="@+id/editTextPays2"
+	            android:layout_width="100dp"
+	            android:layout_height="wrap_content"
+	            android:layout_toRightOf="@+id/editTextVille2"
+	            android:layout_below="@+id/editTextVoie2"
+	            android:hint="pays1" />
+		        
+		    </RelativeLayout>
+					
+		    <View
+			android:layout_width="fill_parent"
+       		android:layout_height="1px"
+        	android:background="#FF909090" 
+        	android:layout_marginTop="5dp"
+        	android:layout_below="@+id/relativeprincipal2"/>
+		    
+		    
+		    <!-- adresse 3 -->
+		    
+		    <RelativeLayout 
+		        android:id="@+id/relativeprincipal3"
+		        android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
+				android:layout_below="@+id/relativeprincipal2">
+			
+		        <TextView 
+	       		android:id="@+id/editTextTitleaddresse3"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerHorizontal="true"
+	            android:textColor="@color/text_blue"
+	            android:text="Adresse 3"
+	            android:textAppearance="?android:attr/textAppearanceMedium"
+	             />
+		        
+		        <EditText
+		            android:id="@+id/editTextVoie3"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentLeft="true"
+		            android:layout_alignParentRight="true"
+		            android:layout_below="@+id/editTextTitleaddresse3"
+		            android:hint="voie3" />
+		        
+			<EditText
+	            android:id="@+id/editTextVille3"
+	            android:layout_width="200dp"
+	            android:layout_height="wrap_content" 
+	            android:layout_below="@+id/editTextVoie3"
+	            android:hint="ville1" />
+			
+			<EditText
+	            android:id="@+id/editTextPays3"
+	            android:layout_width="100dp"
+	            android:layout_height="wrap_content"
+	            android:layout_toRightOf="@+id/editTextVille3"
+	            android:layout_below="@+id/editTextVoie3"
+	            android:hint="pays1" />
+		        
+		    </RelativeLayout>
+					
+		    <View
+			android:layout_width="fill_parent"
+       		android:layout_height="1px"
+        	android:background="#FF909090" 
+        	android:layout_marginTop="5dp"
+        	android:layout_below="@+id/relativeprincipal3"/>
+		    
+		    
+		    
+		    <!-- adresse 4 -->
+		    <RelativeLayout 
+		        android:id="@+id/relativeprincipal4"
+		        android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
+				android:layout_below="@+id/relativeprincipal3">
+			
+		        <TextView 
+	       		android:id="@+id/editTextTitleaddresse4"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerHorizontal="true"
+	            android:textColor="@color/text_blue"
+	            android:text="Adresse 4"
+	            android:textAppearance="?android:attr/textAppearanceMedium"
+	             />
+		        
+		        <EditText
+		            android:id="@+id/editTextVoie4"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentLeft="true"
+		            android:layout_alignParentRight="true"
+		            android:layout_below="@+id/editTextTitleaddresse4"
+		            android:hint="voie4" />
+		        
+			<EditText
+	            android:id="@+id/editTextVille4"
+	            android:layout_width="200dp"
+	            android:layout_height="wrap_content" 
+	            android:layout_below="@+id/editTextVoie4"
+	            android:hint="ville1" />
+			
+			<EditText
+	            android:id="@+id/editTextPays4"
+	            android:layout_width="100dp"
+	            android:layout_height="wrap_content"
+	            android:layout_toRightOf="@+id/editTextVille4"
+	            android:layout_below="@+id/editTextVoie4"
+	            android:hint="pays1" />
+		        
+		    </RelativeLayout>
+					
+		    <View
+			android:layout_width="fill_parent"
+       		android:layout_height="1px"
+        	android:background="#FF909090" 
+        	android:layout_marginTop="5dp"
+        	android:layout_below="@+id/relativeprincipal4"/>
+		    
+		    
+		    <!-- adresse 5 -->
+		    
+		    <RelativeLayout 
+		        android:id="@+id/relativeprincipal5"
+		        android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
+				android:layout_below="@+id/relativeprincipal4">
+			
+		        <TextView 
+	       		android:id="@+id/editTextTitleaddresse5"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerHorizontal="true"
+	            android:textColor="@color/text_blue"
+	            android:text="Adresse 5"
+	            android:textAppearance="?android:attr/textAppearanceMedium"
+	             />
+		        
+		        <EditText
+		            android:id="@+id/editTextVoie5"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentLeft="true"
+		            android:layout_alignParentRight="true"
+		            android:layout_below="@+id/editTextTitleaddresse5"
+		            android:hint="voie3" />
+		        
+			<EditText
+	            android:id="@+id/editTextVille5"
+	            android:layout_width="200dp"
+	            android:layout_height="wrap_content" 
+	            android:layout_below="@+id/editTextVoie5"
+	            android:hint="ville1" />
+			
+			<EditText
+	            android:id="@+id/editTextPays5"
+	            android:layout_width="100dp"
+	            android:layout_height="wrap_content"
+	            android:layout_toRightOf="@+id/editTextVille5"
+	            android:layout_below="@+id/editTextVoie5"
+	            android:hint="pays1" />
+		        
+		    </RelativeLayout>
+					
+		    <View
+			android:layout_width="fill_parent"
+       		android:layout_height="1px"
+        	android:background="#FF909090" 
+        	android:layout_marginTop="5dp"
+        	android:layout_below="@+id/relativeprincipal5"/>
+		    
+		    
+		    <!-- adresse 6 -->
+		    <RelativeLayout 
+		        android:id="@+id/relativeprincipal6"
+		        android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
+				android:layout_below="@+id/relativeprincipal5">
+			
+		        <TextView 
+	       		android:id="@+id/editTextTitleaddresse6"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerHorizontal="true"
+	            android:textColor="@color/text_blue"
+	            android:text="Adresse 6"
+	            android:textAppearance="?android:attr/textAppearanceMedium"
+	             />
+		        
+		        <EditText
+		            android:id="@+id/editTextVoie6"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentLeft="true"
+		            android:layout_alignParentRight="true"
+		            android:layout_below="@+id/editTextTitleaddresse6"
+		            android:hint="voie6" />
+		        
+			<EditText
+	            android:id="@+id/editTextVille6"
+	            android:layout_width="200dp"
+	            android:layout_height="wrap_content" 
+	            android:layout_below="@+id/editTextVoie6"
+	            android:hint="ville1" />
+			
+			<EditText
+	            android:id="@+id/editTextPays6"
+	            android:layout_width="100dp"
+	            android:layout_height="wrap_content"
+	            android:layout_toRightOf="@+id/editTextVille6"
+	            android:layout_below="@+id/editTextVoie6"
+	            android:hint="pays1" />
+		        
+		    </RelativeLayout>
+					
+		    <View
+			android:layout_width="fill_parent"
+       		android:layout_height="1px"
+        	android:background="#FF909090" 
+        	android:layout_marginTop="5dp"
+        	android:layout_below="@+id/relativeprincipal6"/>
+		    
+			
+		
+			<RelativeLayout 
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_marginTop="10dp"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="10dp"
+				android:layout_below="@+id/relativeprincipal6" >
+			
+				<Button
+					android:id="@+id/buttonValidation"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerHorizontal="true"
+					android:text="Valider"
+					android:background="@drawable/button_selector"/>
+	
+			</RelativeLayout>
+		
+		</RelativeLayout>
+	</ScrollView>
+</LinearLayout>
+			
