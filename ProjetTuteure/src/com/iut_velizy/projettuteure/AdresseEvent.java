@@ -1,11 +1,15 @@
 package com.iut_velizy.projettuteure;
 
+import com.iut_velizy.dao.CreateEventDAO;
+import com.iut_velizy.localStorage.CreateEventStatic;
+
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.Message;
+import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -43,12 +47,31 @@ public class AdresseEvent extends DialogFragment
         View view = inflater.inflate(R.layout.createevent_adresses, container, false);
         
         //liste des champs
-        final EditText et = (EditText) view.findViewById(R.id.editText);
+        /*final EditText et = (EditText) view.findViewById(R.id.editText);
         final EditText et2 = (EditText) view.findViewById(R.id.editText2);
         final EditText et3 = (EditText) view.findViewById(R.id.editText3);
         final EditText et4 = (EditText) view.findViewById(R.id.editText4);
         final EditText et5 = (EditText) view.findViewById(R.id.editText5);
-        final EditText et6 = (EditText) view.findViewById(R.id.editText6);
+        final EditText et6 = (EditText) view.findViewById(R.id.editText6);*/
+        
+        final EditText etv1 = (EditText) view.findViewById(R.id.editTextVoie1);
+        final EditText etvi1 = (EditText) view.findViewById(R.id.editTextVille1);
+        final EditText etp1 = (EditText) view.findViewById(R.id.editTextPays1);
+        final EditText etv2 = (EditText) view.findViewById(R.id.editTextVoie2);
+        final EditText etvi2 = (EditText) view.findViewById(R.id.editTextVille2);
+        final EditText etp2 = (EditText) view.findViewById(R.id.editTextPays2);
+        final EditText etv3 = (EditText) view.findViewById(R.id.editTextVoie3);
+        final EditText etvi3 = (EditText) view.findViewById(R.id.editTextVille3);
+        final EditText etp3 = (EditText) view.findViewById(R.id.editTextPays3);
+        final EditText etv4 = (EditText) view.findViewById(R.id.editTextVoie4);
+        final EditText etvi4 = (EditText) view.findViewById(R.id.editTextVille4);
+        final EditText etp4 = (EditText) view.findViewById(R.id.editTextPays4);
+        final EditText etv5 = (EditText) view.findViewById(R.id.editTextVoie5);
+        final EditText etvi5 = (EditText) view.findViewById(R.id.editTextVille5);
+        final EditText etp5 = (EditText) view.findViewById(R.id.editTextPays5);
+        final EditText etv6 = (EditText) view.findViewById(R.id.editTextVoie6);
+        final EditText etvi6 = (EditText) view.findViewById(R.id.editTextVille6);
+        final EditText etp6 = (EditText) view.findViewById(R.id.editTextPays6);
         
         //bouton valider
         Button validButton = (Button) view.findViewById(R.id.buttonValidation);
@@ -57,16 +80,37 @@ public class AdresseEvent extends DialogFragment
             @Override
             public void onClick(View view) {
             	//récupération des données
-            	String adresse1=et.getText().toString();
+            	/*String adresse1=et.getText().toString();
             	String adresse2=et2.getText().toString();
             	String adresse3=et3.getText().toString();
             	String adresse4=et4.getText().toString();
             	String adresse5=et5.getText().toString();
-            	String adresse6=et6.getText().toString();
+            	String adresse6=et6.getText().toString();*/
+            	CreateEventStatic.adresse1_voie = etv1.getText().toString();
+            	CreateEventStatic.adresse1_ville = etvi1.getText().toString();
+            	CreateEventStatic.adresse1_pays = etp1.getText().toString();
+            	CreateEventStatic.adresse2_voie = etv2.getText().toString();
+            	CreateEventStatic.adresse2_ville = etvi2.getText().toString();
+            	CreateEventStatic.adresse2_pays = etp2.getText().toString();
+            	CreateEventStatic.adresse3_voie = etv3.getText().toString();
+            	CreateEventStatic.adresse3_ville = etvi3.getText().toString();
+            	CreateEventStatic.adresse3_pays = etp3.getText().toString();
+            	CreateEventStatic.adresse4_voie = etv4.getText().toString();
+            	CreateEventStatic.adresse4_ville = etvi4.getText().toString();
+            	CreateEventStatic.adresse4_pays = etp4.getText().toString();
+            	CreateEventStatic.adresse5_voie = etv5.getText().toString();
+            	CreateEventStatic.adresse5_ville = etvi5.getText().toString();
+            	CreateEventStatic.adresse5_pays = etp5.getText().toString();
+            	CreateEventStatic.adresse6_voie = etv6.getText().toString();
+            	CreateEventStatic.adresse6_ville = etvi6.getText().toString();
+            	CreateEventStatic.adresse6_pays = etp6.getText().toString();
             	
-            	//enregistrement dans la base de données
-            	Maps newF2 = new Maps(adresse1,adresse2,adresse3,adresse4,adresse5,adresse6);
-    			newF2.show(getFragmentManager(), "dialog");
+            	//numéro IMEI
+            	TelephonyManager telephonyManager = (TelephonyManager)view.getContext().getSystemService(view.getContext().TELEPHONY_SERVICE);
+            	CreateEventStatic.imei = telephonyManager.getDeviceId();
+            	
+            	CreateEventDAO ceDao = new CreateEventDAO();
+            	ceDao.execute();
             }
         });
         

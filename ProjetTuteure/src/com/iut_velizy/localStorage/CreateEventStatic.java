@@ -7,11 +7,13 @@ package com.iut_velizy.localStorage;
  */
 public class CreateEventStatic
 {
+	public static String imei="";
 	public static String nomEvent="";
 	public static String centreInteret="";
 	public static String dateEvent="";
 	public static String heureEvent="";
 	public static String dateCalcul="";
+	public static String heureCalcul="";
 	public static String description="";
 	
 	public static String adresse1_voie="";

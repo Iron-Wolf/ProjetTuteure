@@ -46,6 +46,7 @@ public class Form extends DialogFragment
         final EditText etDateEvent = (EditText) view.findViewById(R.id.editTextEventDate);
         final EditText etHeureEvent = (EditText) view.findViewById(R.id.editTextEventTime);
         final EditText etDateCalcul = (EditText) view.findViewById(R.id.editTextEndDate);
+        final EditText etheureCalcul = (EditText) view.findViewById(R.id.editTextEndTime);
         final EditText etDescription = (EditText) view.findViewById(R.id.editTextMessage);
         
         //action sur le bouton d'invitation
@@ -64,6 +65,7 @@ public class Form extends DialogFragment
             	CreateEventStatic.dateEvent = etDateEvent.getText().toString();
             	CreateEventStatic.heureEvent = etHeureEvent.getText().toString();
             	CreateEventStatic.dateCalcul = etDateCalcul.getText().toString();
+            	CreateEventStatic.heureCalcul = etheureCalcul.getText().toString();
             	CreateEventStatic.description = etDescription.getText().toString();
             	
             	AdresseEvent cf = new AdresseEvent();

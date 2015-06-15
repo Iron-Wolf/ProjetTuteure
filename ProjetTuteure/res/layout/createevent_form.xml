@@ -121,9 +121,21 @@
 			    android:layout_height="wrap_content"
 			    android:layout_marginTop="0dp"
 			    android:layout_below="@+id/textViewEndDate"
-			    android:ems="10"
+			    android:ems="7"
 			    android:hint="01/01/2000"
 			    android:inputType="date" />
+			
+			<EditText
+	            android:id="@+id/editTextEndTime"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/textViewEndDate"
+	            android:layout_marginTop="0dp"
+	            android:layout_marginRight="20dp" 
+	            android:layout_toRightOf="@+id/editTextEndDate"
+	            android:ems="5"
+	            android:hint="hh:mm"
+	            android:inputType="time" />
 			
 			<EditText
 			    android:id="@+id/editTextMessage"
@@ -143,7 +155,7 @@
 			    android:layout_below="@+id/editTextMessage"
 			    android:layout_centerHorizontal="true"
 			    android:layout_marginTop="20dp"
-			    android:text="Inviter des amis"
+			    android:text="Ajoutez les adresses"
 			    android:background="@drawable/button_selector" />
 
     	</RelativeLayout>
