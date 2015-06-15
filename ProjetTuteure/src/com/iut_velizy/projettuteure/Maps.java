@@ -50,6 +50,7 @@ public class Maps extends DialogFragment {
     		//rentrés par l'utilisateur, on calcul le barycentre
     		double moyLat = 0;
     		double moyLng = 0;
+    		int j=0;
     		
     		for (int i=0; i<arrayLoc.size(); i+=2)
     		{
@@ -57,7 +58,7 @@ public class Maps extends DialogFragment {
     			moyLng += Double.parseDouble(arrayLoc.get(i+1));
     			LatLng currentLoc =  new LatLng(Double.parseDouble(arrayLoc.get(i)),Double.parseDouble(arrayLoc.get(i+1)));
     			map.addMarker(new MarkerOptions()
-                .title("Position : "+(i+1))
+                .title("Position : "+(j++))
                 .position(currentLoc));
     		}
     		
