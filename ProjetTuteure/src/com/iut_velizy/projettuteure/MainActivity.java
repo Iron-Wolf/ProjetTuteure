@@ -97,6 +97,8 @@ public class MainActivity extends FragmentActivity
     	{
     		// récupere les données
     		new Initialisation(this).execute();
+    		//LoginActivity test = new LoginActivity();
+    		//test.show(getFragmentManager(),"SON PERE");
     	} 
     	else
     	{

@@ -38,8 +38,21 @@
     <string name="textFriends"> Liste de vos amis </string>
     
     <string name="titleProfil"> Profil </string>
-    <string name="textProfil"> Votre profil </string>
+    <string name="textProfil"> Votre profil </string>    
     
-    
+    <!-- Textes Login -->
+    <string name="logout">Logout Me</string>
+    <string name="rememberme">Remember Me</string>
+    <string name="notification">Notification</string>
+    <string name="notification_title">Connexion réussie</string>
+    <string name="notification_desc">Votre session est active</string>
+    <string name="register">REGISTER</string>
+    <string name="fullname">Full Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="alreadyregistred">Already registred. Login Me!</string>   
+    <string name="register_">Register</string>
+    <string name="login">LOGIN</string>
+    <string name="new_account">I don\'t have account. Register Me!</string>
     
 </resources>
