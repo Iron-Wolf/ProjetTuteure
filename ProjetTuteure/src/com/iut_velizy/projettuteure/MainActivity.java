@@ -96,7 +96,7 @@ public class MainActivity extends FragmentActivity
     	if (networkInfo != null && networkInfo.isConnected())
     	{
     		// récupere les données
-    		new Initialisation(this).execute();
+    		//new Initialisation(this).execute();
     		//LoginActivity test = new LoginActivity();
     		//test.show(getFragmentManager(),"SON PERE");
     	} 

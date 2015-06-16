@@ -23,7 +23,7 @@ public class CreateEvent extends Fragment
     		public void onClick(View v) {
     			//affiche la fenêtre de création d'un evenement
     			Form newF = new Form();
-    			newF.show(getFragmentManager(), "dialog");
+    			newF.show(getFragmentManager(), "createevent_form");
             }
         });
     	

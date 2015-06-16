@@ -6,6 +6,7 @@ import com.iut_velizy.localStorage.CreateEventStatic;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
+import android.app.Fragment;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.Message;
@@ -17,6 +18,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 /**
  * gestion des adresses lors de la création d'un evenement
@@ -47,13 +49,6 @@ public class AdresseEvent extends DialogFragment
         View view = inflater.inflate(R.layout.createevent_adresses, container, false);
         
         //liste des champs
-        /*final EditText et = (EditText) view.findViewById(R.id.editText);
-        final EditText et2 = (EditText) view.findViewById(R.id.editText2);
-        final EditText et3 = (EditText) view.findViewById(R.id.editText3);
-        final EditText et4 = (EditText) view.findViewById(R.id.editText4);
-        final EditText et5 = (EditText) view.findViewById(R.id.editText5);
-        final EditText et6 = (EditText) view.findViewById(R.id.editText6);*/
-        
         final EditText etv1 = (EditText) view.findViewById(R.id.editTextVoie1);
         final EditText etvi1 = (EditText) view.findViewById(R.id.editTextVille1);
         final EditText etp1 = (EditText) view.findViewById(R.id.editTextPays1);
@@ -80,12 +75,6 @@ public class AdresseEvent extends DialogFragment
             @Override
             public void onClick(View view) {
             	//récupération des données
-            	/*String adresse1=et.getText().toString();
-            	String adresse2=et2.getText().toString();
-            	String adresse3=et3.getText().toString();
-            	String adresse4=et4.getText().toString();
-            	String adresse5=et5.getText().toString();
-            	String adresse6=et6.getText().toString();*/
             	CreateEventStatic.adresse1_voie = etv1.getText().toString();
             	CreateEventStatic.adresse1_ville = etvi1.getText().toString();
             	CreateEventStatic.adresse1_pays = etp1.getText().toString();
@@ -109,8 +98,29 @@ public class AdresseEvent extends DialogFragment
             	TelephonyManager telephonyManager = (TelephonyManager)view.getContext().getSystemService(view.getContext().TELEPHONY_SERVICE);
             	CreateEventStatic.imei = telephonyManager.getDeviceId();
             	
-            	CreateEventDAO ceDao = new CreateEventDAO();
-            	ceDao.execute();
+            	
+            	if (CreateEventStatic.adresse1_voie.equals("") ||
+                	CreateEventStatic.adresse1_ville.equals("") ||
+                	CreateEventStatic.adresse1_pays.equals(""))
+                {
+                	Toast.makeText(view.getContext(), "nécessite une adresse minimum", Toast.LENGTH_SHORT).show();
+                }
+                else
+                {
+	            	//enregistrement en base
+	            	CreateEventDAO ceDao = new CreateEventDAO(view.getContext());
+	            	ceDao.execute();
+	            	
+	            	
+	            	//on dismiss les deux fragments et redirige l'utilisateur au premier écrant
+	            	Fragment prev = getFragmentManager().findFragmentByTag("createevent_form");
+	                if (prev != null) {
+	                    DialogFragment df = (DialogFragment) prev;
+	                    df.dismiss();
+	                }
+	                
+	            	dismiss();
+                }
             }
         });
         

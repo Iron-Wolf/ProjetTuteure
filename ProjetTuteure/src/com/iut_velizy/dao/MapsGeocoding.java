@@ -47,19 +47,18 @@ public class MapsGeocoding extends AsyncTask<String, Void, ArrayList<String>>
 
             String line;
             StringBuffer sb = new StringBuffer();
-            // take Google's legible JSON and turn it into one big
-            // string.
+            // on transforme le JSON de Google en un simple String
             while ((line = in.readLine()) != null) {
                 sb.append(line);
             }
             
             
-            // build a JSON object
+            // construction de l'objet JSON
             JSONObject obj = new JSONObject(sb.toString());
             if (! obj.getString("status").equals("OK"))
                 return null;
          
-            // get the first result
+            // on récupère le premier noeud, puis on descend jusqu'aux coordonnées
             JSONObject res = obj.getJSONArray("results").getJSONObject(0);
             
             JSONObject loc =

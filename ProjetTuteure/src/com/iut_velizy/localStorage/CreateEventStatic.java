@@ -39,4 +39,6 @@ public class CreateEventStatic
 	public static String adresse6_voie="";
 	public static String adresse6_ville="";
 	public static String adresse6_pays="";
+	
+	public static int eventValider=0;
 }

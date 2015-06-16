@@ -45,7 +45,7 @@ public class Initialisation extends AsyncTask<Void, Void, String>
         String jsonData = new String();
         
         try {
-            HttpResponse response = this.client.execute(new HttpGet("http://192.168.1.12/getTest.php"));
+            HttpResponse response = this.client.execute(new HttpGet("http://bountiful.minecraftnoob.com/getTest.php"));
             
             HttpEntity entity = response.getEntity();
             jsonData = EntityUtils.toString(entity);

@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 /**
  * Formulaire de création d'un évènement
@@ -68,8 +69,20 @@ public class Form extends DialogFragment
             	CreateEventStatic.heureCalcul = etheureCalcul.getText().toString();
             	CreateEventStatic.description = etDescription.getText().toString();
             	
-            	AdresseEvent cf = new AdresseEvent();
-            	cf.show(getFragmentManager(), "dialog");
+            	if (CreateEventStatic.nomEvent.equals("") ||
+            		CreateEventStatic.centreInteret.equals("") ||
+            		CreateEventStatic.dateEvent.equals("") ||
+            		CreateEventStatic.heureEvent.equals("") ||
+            		CreateEventStatic.dateCalcul.equals("") ||
+            		CreateEventStatic.heureCalcul.equals(""))
+            	{
+            		Toast.makeText(view.getContext(), "Champ(s) manquant", Toast.LENGTH_SHORT).show();
+            	}
+            	else
+            	{
+            		AdresseEvent cf = new AdresseEvent();
+            		cf.show(getFragmentManager(), "createevent_adresses");
+            	}
             }
         });
         
@@ -85,4 +98,5 @@ public class Form extends DialogFragment
 
         return view;
     }
+	
 }

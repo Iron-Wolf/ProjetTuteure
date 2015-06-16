@@ -12,22 +12,26 @@ import com.iut_velizy.projettuteure.Profil;
 import com.iut_velizy.projettuteure.R;
 
 import android.app.FragmentTransaction;
+import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
- * Appel à la base de données pour la vue <i>Profil</i>
+ * création d'un évènement en base de données
  *
  */
 public class CreateEventDAO extends AsyncTask<Void, Void, String>
 {
 	private HttpClient client;
-	private String jsonData;
+	private Context context;
+	private boolean flag;
 	
-	public CreateEventDAO()
+	public CreateEventDAO(Context context)
 	{
 		this.client = new DefaultHttpClient();
+		this.context = context;
 	}
 	
 	@Override
@@ -47,7 +51,7 @@ public class CreateEventDAO extends AsyncTask<Void, Void, String>
         	url+="&e_nom=" + CreateEventStatic.nomEvent;
         	url+="&e_type=" + CreateEventStatic.centreInteret;
         	url+="&e_date=" + formatDate(CreateEventStatic.dateEvent,CreateEventStatic.heureEvent);
-        	url+="&e_fin_creation=" + formatDate(CreateEventStatic.dateCalcul,CreateEventStatic.heureCalcul);
+        	url+="&e_date_fin_creation=" + formatDate(CreateEventStatic.dateCalcul,CreateEventStatic.heureCalcul);
         	url+="&e_description=" + CreateEventStatic.description;
         	url+="&a1_voie=" + CreateEventStatic.adresse1_voie + "&a1_ville=" + CreateEventStatic.adresse1_ville + "&a1_pays=" + CreateEventStatic.adresse1_pays;
         	url+="&a2_voie=" + CreateEventStatic.adresse2_voie + "&a2_ville=" + CreateEventStatic.adresse2_ville + "&a2_pays=" + CreateEventStatic.adresse2_pays;
@@ -56,12 +60,19 @@ public class CreateEventDAO extends AsyncTask<Void, Void, String>
         	url+="&a4_voie=" + CreateEventStatic.adresse5_voie + "&a5_ville=" + CreateEventStatic.adresse5_ville + "&a5_pays=" + CreateEventStatic.adresse5_pays;
         	url+="&a6_voie=" + CreateEventStatic.adresse6_voie + "&a6_ville=" + CreateEventStatic.adresse6_ville + "&a6_pays=" + CreateEventStatic.adresse6_pays;
         	
+        	url = url.replace(" ", "%20");
+        	
             HttpResponse response = this.client.execute(new HttpGet(url));
             
             HttpEntity entity = response.getEntity();
             jsonData = EntityUtils.toString(entity);
+            flag = true;
             
-        } catch (Exception e) { Log.e("RPC","Exception levée:", e); }
+        } catch (Exception e)
+        {
+        	Log.e("RPC","Exception levée:", e);
+        	flag = false;
+        }
         
         return jsonData;
 	}
@@ -70,9 +81,19 @@ public class CreateEventDAO extends AsyncTask<Void, Void, String>
     protected void onPostExecute(String result)
 	{
 		//après l'exécution
+		String msg;
+		if (flag)
+			msg = "Evènement créé";
+		else
+			msg = "Impossible de créer l'évènement";
 		
+		Toast.makeText(context, msg, Toast.LENGTH_LONG).show();
     }
 	
+	/**
+	 * change le format de la date pour correspondre au format de base de données<br/>
+	 * exemple : 01/12/2015 12:00   -->   2015-12-01 12:00:00
+	 */
 	private String formatDate(String date, String heure)
 	{
 		String retour="";
@@ -82,10 +103,5 @@ public class CreateEventDAO extends AsyncTask<Void, Void, String>
 		retour += " " + heure + ":00";
 		
 		return retour;
-	}
-	
-	public String getJsonData()
-	{
-		return jsonData;
 	}
 }
