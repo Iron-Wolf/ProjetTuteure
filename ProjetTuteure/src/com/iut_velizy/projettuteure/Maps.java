@@ -50,7 +50,7 @@ public class Maps extends DialogFragment {
     		//rentrés par l'utilisateur, on calcul le barycentre
     		double moyLat = 0;
     		double moyLng = 0;
-    		int j=0;
+    		int j=1;
     		
     		for (int i=0; i<arrayLoc.size(); i+=2)
     		{

@@ -60,7 +60,7 @@ public class FindEventDAO extends AsyncTask<Void, Void, String>
         {
 	        try {
 	        	//connection
-	        	String url = "http://192.168.1.12/findEvent.php?evenement_id="+id;
+	        	String url = "http://bountiful.minecraftnoob.com/findEvent.php?evenement_id="+id;
 	            HttpResponse response = this.client.execute(new HttpGet(url));
 	            
 	            //récupération du JSON

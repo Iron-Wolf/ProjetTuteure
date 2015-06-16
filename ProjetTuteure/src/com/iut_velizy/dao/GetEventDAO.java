@@ -40,7 +40,7 @@ public class GetEventDAO extends AsyncTask<Void, Void, String>
         String jsonData = new String();
         
         try {
-        	String url = "http://192.168.1.12/getEvent.php?id="+ComingEventStatic.imei;
+        	String url = "http://bountiful.minecraftnoob.com/getEvent.php?id="+ComingEventStatic.imei;
         	
         	//execution de la requête
             HttpResponse response = this.client.execute(new HttpGet(url));
