@@ -7,6 +7,7 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
 
+import com.iut_velizy.localStorage.LocalSettings;
 import com.iut_velizy.projettuteure.MainActivity;
 
 import android.app.ProgressDialog;
@@ -45,7 +46,7 @@ public class Initialisation extends AsyncTask<Void, Void, String>
         String jsonData = new String();
         
         try {
-            HttpResponse response = this.client.execute(new HttpGet("http://bountiful.minecraftnoob.com/getTest.php"));
+            HttpResponse response = this.client.execute(new HttpGet("http://"+LocalSettings.url+"/getTest.php"));
             
             HttpEntity entity = response.getEntity();
             jsonData = EntityUtils.toString(entity);
@@ -56,10 +57,9 @@ public class Initialisation extends AsyncTask<Void, Void, String>
 	}
 	
 	@Override
-    protected void onPostExecute(String result) {
-            
+    protected void onPostExecute(String result)
+	{
         if(progress.isShowing()) progress.dismiss();    
-        this.screen.populate(result);
     }
 	
 }

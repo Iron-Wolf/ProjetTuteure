@@ -8,6 +8,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
 
 import com.iut_velizy.localStorage.CreateEventStatic;
+import com.iut_velizy.localStorage.LocalSettings;
 import com.iut_velizy.projettuteure.Profil;
 import com.iut_velizy.projettuteure.R;
 
@@ -46,7 +47,7 @@ public class CreateEventDAO extends AsyncTask<Void, Void, String>
         String jsonData = new String();
         
         try {
-        	String url = "http://bountiful.minecraftnoob.com/createEvent.php";
+        	String url = "http://"+LocalSettings.url+"/createEvent.php";
         	url+="?e_organisateur_id=" + CreateEventStatic.imei;
         	url+="&e_nom=" + CreateEventStatic.nomEvent;
         	url+="&e_type=" + CreateEventStatic.centreInteret;

@@ -28,7 +28,7 @@ public class Profil extends Fragment
     		public void onClick(View v) {
     			//affiche la fenêtre de modification du profil
     			ChangeProfil newF = new ChangeProfil();
-    			newF.show(getFragmentManager(), "dialog");
+    			newF.show(getFragmentManager(), "changeProfil dialog");
             }
         });
     	

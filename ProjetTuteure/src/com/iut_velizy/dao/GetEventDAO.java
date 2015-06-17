@@ -11,7 +11,9 @@ import org.json.JSONObject;
 
 import android.os.AsyncTask;
 import android.util.Log;
+
 import com.iut_velizy.localStorage.ComingEventStatic;
+import com.iut_velizy.localStorage.LocalSettings;
 import com.iut_velizy.projettuteure.ComingEvent;
 
 /**
@@ -40,7 +42,7 @@ public class GetEventDAO extends AsyncTask<Void, Void, String>
         String jsonData = new String();
         
         try {
-        	String url = "http://bountiful.minecraftnoob.com/getEvent.php?id="+ComingEventStatic.imei;
+        	String url = "http://"+LocalSettings.url+"/getEvent.php?id="+ComingEventStatic.imei;
         	
         	//execution de la requête
             HttpResponse response = this.client.execute(new HttpGet(url));

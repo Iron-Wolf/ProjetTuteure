@@ -23,6 +23,7 @@ import android.widget.TableRow.LayoutParams;
 import android.widget.TextView;
 
 import com.iut_velizy.localStorage.ComingEventStatic;
+import com.iut_velizy.localStorage.LocalSettings;
 import com.iut_velizy.projettuteure.ComingEvent;
 import com.iut_velizy.projettuteure.History;
 import com.iut_velizy.projettuteure.Maps;
@@ -60,7 +61,7 @@ public class FindEventDAO extends AsyncTask<Void, Void, String>
         {
 	        try {
 	        	//connection
-	        	String url = "http://bountiful.minecraftnoob.com/findEvent.php?evenement_id="+id;
+	        	String url = "http://"+LocalSettings.url+"/findEvent.php?evenement_id="+id;
 	            HttpResponse response = this.client.execute(new HttpGet(url));
 	            
 	            //récupération du JSON

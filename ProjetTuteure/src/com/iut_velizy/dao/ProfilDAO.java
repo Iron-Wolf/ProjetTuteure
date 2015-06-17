@@ -7,6 +7,7 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
 
+import com.iut_velizy.localStorage.LocalSettings;
 import com.iut_velizy.projettuteure.Profil;
 import com.iut_velizy.projettuteure.R;
 
@@ -43,7 +44,7 @@ public class ProfilDAO extends AsyncTask<Void, Void, String>
         String jsonData = new String();
         
         try {
-            HttpResponse response = this.client.execute(new HttpGet("http://bountiful.minecraftnoob.com/getTest.php"));
+            HttpResponse response = this.client.execute(new HttpGet("http://"+LocalSettings.url+"/getTest.php"));
             
             HttpEntity entity = response.getEntity();
             jsonData = EntityUtils.toString(entity);

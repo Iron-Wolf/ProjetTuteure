@@ -11,14 +11,15 @@ import android.content.Context;
 import android.widget.Toast;
 
 /**
- * gère les données de sauvegarde dans un fichier local.<br/>
+ * gère les données de sauvegarde dans un fichier local, et les données en caches<br/>
  * Path du fichier : /data/data/PACKAGE_NAME/files/settings.dat
  *
  */
 public class LocalSettings
 {
-	
-	//public static String donnees;
+	public static boolean dejaLoger = false;
+	//public static final String url = "192.168.1.12"; //permet de tester en local
+	public static final String url = "bountiful.minecraftnoob.com";
 	
 	// sauvegarder données
 	public void WriteSettings(Context context, String data)

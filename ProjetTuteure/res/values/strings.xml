@@ -53,6 +53,6 @@
     <string name="alreadyregistred">Already registred. Login Me!</string>   
     <string name="register_">Register</string>
     <string name="login">LOGIN</string>
-    <string name="new_account">I don\'t have account. Register Me!</string>
+    <string name="new_account">Je n\'ai pas de compte, en créer un.</string>
     
 </resources>

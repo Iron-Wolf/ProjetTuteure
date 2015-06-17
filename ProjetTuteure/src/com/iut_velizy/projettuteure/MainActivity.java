@@ -1,6 +1,7 @@
 package com.iut_velizy.projettuteure;
 
 import android.app.ActionBar;
+import android.app.Fragment;
 import android.app.ActionBar.Tab;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -12,6 +13,7 @@ import android.os.Message;
 import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.iut_velizy.dao.Initialisation;
 import com.iut_velizy.localStorage.LocalSettings;
@@ -74,7 +76,6 @@ public class MainActivity extends FragmentActivity
         TabListener<Profil> tl6 = new TabListener<Profil>(this, labelProfil, Profil.class);
         tab.setTabListener(tl6);
         actionBar.addTab(tab);
-        
     }
     
     @Override
@@ -97,8 +98,16 @@ public class MainActivity extends FragmentActivity
     	{
     		// récupere les données
     		//new Initialisation(this).execute();
-    		//LoginActivity test = new LoginActivity();
-    		//test.show(getFragmentManager(),"SON PERE");
+    		
+    		//on test si l'utilisateur a déjà rentrer ses identifiants
+    		//s'il n'est pas loger et si la fenêtre n'est pas déjà affichée, on l'affiche
+    		//permet de gérer la rotation de l'écrant
+    		Fragment prev = getFragmentManager().findFragmentByTag("login dialog");
+    		if (!LocalSettings.dejaLoger && prev==null)
+    		{
+    			LoginActivity login = new LoginActivity(this);
+    			login.show(getFragmentManager(),"login dialog");
+    		}
     	} 
     	else
     	{
@@ -118,11 +127,16 @@ public class MainActivity extends FragmentActivity
     	
     }
     
-    public void populate(String data)
-    {
-    	// mettre à jour les vues
-    }
     
+    public void updateLogin()
+    {
+    	//on réaffiche la page de login si l'utilisateur n'est pas logé
+    	if (!LocalSettings.dejaLoger)
+    	{
+    		LoginActivity login = new LoginActivity(this);
+    		login.show(getFragmentManager(),"login dialog");
+    	}
+    }
     
  
     @Override
@@ -151,7 +165,5 @@ public class MainActivity extends FragmentActivity
             return super.onOptionsItemSelected(item);
         }
     }
-    
-    
     
 }
