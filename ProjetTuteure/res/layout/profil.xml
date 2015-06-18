@@ -72,7 +72,7 @@
 	                android:layout_toRightOf="@+id/imageViewProfil"
 	                android:layout_below="@+id/editTextProfil"
 	                android:layout_marginLeft="20dp"
-	                android:ems="10"
+	                android:ems="17"
 	                android:text="Login"
 	                android:inputType="text" />
 	         
@@ -83,7 +83,7 @@
 	                android:layout_toRightOf="@+id/imageViewProfil"
 	                android:layout_below="@+id/editTextLogin"
 	                android:layout_marginLeft="20dp"
-	                android:ems="10"
+	                android:ems="17"
 	                android:text="Prénom"
 	                android:inputType="text" />
 
@@ -94,7 +94,7 @@
 	                android:layout_toRightOf="@+id/imageViewProfil"
 	                android:layout_below="@+id/editTextFirstName"
 	                android:layout_marginLeft="20dp"
-	                android:ems="10"
+	                android:ems="17"
 	                android:text="Nom"
 	                android:inputType="text" />
 
@@ -105,7 +105,7 @@
 	                android:layout_toRightOf="@+id/imageViewProfil"
 	                android:layout_below="@+id/editTextSecondName"
 	                android:layout_marginLeft="20dp"
-	                android:ems="10"
+	                android:ems="17"
 	                android:text="Mail"
 	                android:inputType="textEmailAddress" />
 	        
@@ -139,8 +139,8 @@
 	                android:layout_toRightOf="@+id/imageViewAdresse"
 	                 android:layout_below="@+id/editTextAdresse"
 	                 android:layout_marginLeft="20dp"
-	                android:ems="10"
-	                android:text="Rue"
+	                android:ems="17"
+	                android:text="Voie"
 	                android:inputType="text" />
 	            
 	            <TextView
@@ -150,7 +150,7 @@
 	                android:layout_toRightOf="@+id/imageViewAdresse"
 	                android:layout_below="@+id/editTextStreet"
 	                android:layout_marginLeft="20dp"
-	                android:ems="10"
+	                android:ems="17"
 	                android:text="Ville"
 	                android:inputType="text" />
 	            
@@ -161,7 +161,7 @@
 	                android:layout_below="@+id/editTextVille"
 	                android:layout_toRightOf="@+id/imageViewAdresse"
 	                android:layout_marginLeft="20dp"
-	                android:ems="10"
+	                android:ems="17"
 	                android:text="Pays"
 	                android:inputType="text" />
 	            

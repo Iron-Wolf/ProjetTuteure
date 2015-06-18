@@ -83,11 +83,26 @@ public class MainActivity extends FragmentActivity
     {
     	super.onStart();
     	
-    	//TEST : sauvegarde / récupération de données dans fichier local
     	LocalSettings ls = new LocalSettings();
-    	//ls.WriteSettings(this,"setting0, setting1, setting2");
-    	//String data[] = ls.ReadSettings(this).split(",");
     	
+    	
+    	//on parcour tous les fichiers
+    	boolean fichierExist = false;
+    	String[] files = fileList();
+	    for (String file : files)
+	    {
+	        if (file.equals(ls.nomFichier))
+	        {
+	            //le fichier existe
+	        	fichierExist = true;
+	        }
+	    }
+	    
+	    //création du fichier s'il n'existe pas
+	    if (!fichierExist)
+	    {
+	    	ls.WriteSettings(this, "");
+	    }
     	
     	
     	//test si le smartphone est connecté à internet
@@ -96,9 +111,6 @@ public class MainActivity extends FragmentActivity
     	NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
     	if (networkInfo != null && networkInfo.isConnected())
     	{
-    		// récupere les données
-    		//new Initialisation(this).execute();
-    		
     		//on test si l'utilisateur a déjà rentrer ses identifiants
     		//s'il n'est pas loger et si la fenêtre n'est pas déjà affichée, on l'affiche
     		//permet de gérer la rotation de l'écrant
@@ -111,23 +123,17 @@ public class MainActivity extends FragmentActivity
     	} 
     	else
     	{
-    		// affiche une erreur
-    		AlertDialog alertDialog = new AlertDialog.Builder(
-                    MainActivity.this).create();
-    		
-    		alertDialog.setTitle("Problème réseau");
-    		alertDialog.setMessage("L'application a besoin d'une connection Internet pour fonctionner");
-    		//alertDialog.setIcon(R.drawable.tick);
-    		
-    		Message msg = null;
-    		alertDialog.setButton(DialogInterface.BUTTON_POSITIVE,"OK", msg);
-    		
-            alertDialog.show();
+    		LoginActivity login = new LoginActivity(this);
+			login.show(getFragmentManager(),"login dialog");
+			Toast.makeText(this, "L'application a besoin d'une connexion Internet", Toast.LENGTH_SHORT).show();
     	}
     	
     }
     
     
+    /**
+     * méthode appelée à chaque dismiss de la dialog de Login
+     */
     public void updateLogin()
     {
     	//on réaffiche la page de login si l'utilisateur n'est pas logé
@@ -136,6 +142,11 @@ public class MainActivity extends FragmentActivity
     		LoginActivity login = new LoginActivity(this);
     		login.show(getFragmentManager(),"login dialog");
     	}
+    	
+    	//lors de la création du profil, on passe une variable static à true
+    	//si elle est true, on affiche un Toast
+    	if (LocalSettings.profilCreer)
+    		Toast.makeText(this, "Création du compte réussie !", Toast.LENGTH_SHORT).show();
     }
     
  

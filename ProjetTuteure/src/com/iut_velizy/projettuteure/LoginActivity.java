@@ -6,7 +6,10 @@ import com.iut_velizy.localStorage.LocalSettings;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
+import android.content.Context;
 import android.content.DialogInterface;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Message;
 import android.view.LayoutInflater;
@@ -25,11 +28,12 @@ public class LoginActivity extends DialogFragment
 	Button btnLogin;
 	Button btnLinkToRegister;
 	private MainActivity screen;
+	private String donneesFichier;
+	private LocalSettings ls;
 	
 	
 	
 	/* Réponse JSON */
-
 	private static String KEY_SUCCESS = "success";
 	private static String KEY_UID = "uid";
 	private static String KEY_NAME = "name";
@@ -38,7 +42,6 @@ public class LoginActivity extends DialogFragment
 
 	
 	/* Enregistrement des préférences */
-
 	public static final String PREFS_NAME = ".Preferences";
 	private static final String PREF_EMAIL = "email";
 	private static final String PREF_PASSWORD = "password";
@@ -72,9 +75,7 @@ public class LoginActivity extends DialogFragment
 	{
 		View view = inflater.inflate(R.layout.login, container, false);
 		
-		
 		/* Importation des caractéristiques des champs et boutons */
-
 		inputEmail = (EditText) view.findViewById(R.id.loginEmail);
 		inputPassword = (EditText) view.findViewById(R.id.loginPassword);
 		checkBox = (CheckBox) view.findViewById(R.id.cbRememberMe);
@@ -82,14 +83,51 @@ public class LoginActivity extends DialogFragment
 		btnLinkToRegister = (Button) view.findViewById(R.id.btnLinkToRegisterScreen);
 		
 		
+		/* lecture des données du fichier */
+		ls = new LocalSettings();
+		donneesFichier = ls.ReadSettings(view.getContext());
+		
+		if (donneesFichier.startsWith("true"))
+		{
+			checkBox.setChecked(true);
+			
+			//affichage des données dans les champs correspondants
+			String[] donnees = donneesFichier.split(":");
+			inputEmail.setText(donnees[1].trim());
+    		inputPassword.setText(donnees[2].trim());
+		}
+		
+		
+		/* clic sur la checkbox */
+		checkBox.setOnClickListener(new View.OnClickListener()
+		{
+			public void onClick(View view)
+			{
+				if (checkBox.isChecked())
+				{
+					//la checkbox est cochée, on met à jour le fichier
+					ls.WriteSettings(view.getContext(), "true");
+					
+				}
+				else
+				{
+					ls.WriteSettings(view.getContext(), "false");
+				}
+			}
+		});
+		
+		
 		/* Clic sur le bouton Login */
-
 		btnLogin.setOnClickListener(new View.OnClickListener()
 		{
 			public void onClick(View view)
 			{
 				String login = inputEmail.getText().toString();
 				String password = inputPassword.getText().toString();
+				
+				//si la check box est cochée, on enregistre les valeurs
+				if (checkBox.isChecked())
+					ls.WriteSettings(view.getContext(), "true:"+login+":"+password);
 				
 				// APPEL ICI !!!!!!
 				try
@@ -99,14 +137,6 @@ public class LoginActivity extends DialogFragment
 		
 					LoginDAO ldao = new LoginDAO(getFragmentManager());
 					ldao.execute(url);
-					/*DefaultHttpClient client = new DefaultHttpClient();
-			        HttpResponse response = client.execute(new HttpGet(url));
-			            
-			        HttpEntity entity = response.getEntity();
-			        jsonData = EntityUtils.toString(entity);
-			        
-			        JSONObject obj = new JSONObject(jsonData);
-			        String result = obj.getString("etat");*/
 				}
 				catch (Exception e)
 				{
@@ -117,7 +147,6 @@ public class LoginActivity extends DialogFragment
 		
 		
 		/* Clic sur le bouton de création de compte */
-		
 		btnLinkToRegister.setOnClickListener(new View.OnClickListener()
 		{
 			public void onClick(View view)

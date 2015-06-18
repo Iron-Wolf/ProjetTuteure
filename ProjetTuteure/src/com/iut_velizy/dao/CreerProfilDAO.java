@@ -47,6 +47,7 @@ public class CreerProfilDAO extends AsyncTask<String, Void, String>
             if (resultExec==0)
             {
             	profilCreer = true;
+            	LocalSettings.profilCreer = true;
             }
             else
             {

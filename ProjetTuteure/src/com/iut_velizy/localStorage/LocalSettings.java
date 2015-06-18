@@ -1,5 +1,6 @@
 package com.iut_velizy.localStorage;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -17,9 +18,19 @@ import android.widget.Toast;
  */
 public class LocalSettings
 {
+	//flag qui controle l'affichage de la page de login
 	public static boolean dejaLoger = false;
-	//public static final String url = "192.168.1.12"; //permet de tester en local
-	public static final String url = "bountiful.minecraftnoob.com";
+	
+	//flag qui indique si le profil a bien été créé
+	public static boolean profilCreer = false;
+	
+	//nom du fichier
+	public final String nomFichier = "settings.dat";
+	
+	
+	public static final String url = "192.168.1.12"; //permet de tester en local
+	//public static final String url = "bountiful.minecraftnoob.com";
+	
 	
 	// sauvegarder données
 	public void WriteSettings(Context context, String data)
@@ -27,15 +38,14 @@ public class LocalSettings
 		FileOutputStream fOut = null;
 		OutputStreamWriter osw = null;
 		try{
-			fOut = context.openFileOutput("settings.dat",0);      
+			fOut = context.openFileOutput(nomFichier,0);      
 			osw = new OutputStreamWriter(fOut);
 			osw.write(data);
 			osw.flush();
-			Toast.makeText(context, "Settings saved",Toast.LENGTH_SHORT).show();
 			}
 		catch (Exception e) {
 			e.printStackTrace();
-			Toast.makeText(context, "Settings not saved",Toast.LENGTH_SHORT).show();
+			Toast.makeText(context, "Erreur de sauvegarde",Toast.LENGTH_SHORT).show();
 			}
 		finally 
 		{
@@ -60,16 +70,15 @@ public class LocalSettings
 		
 		try
 		{
-			fIn = context.openFileInput("settings.dat");
+			fIn = context.openFileInput(nomFichier);
 			isr = new InputStreamReader(fIn);
 			isr.read(inputBuffer);
 			data = new String(inputBuffer);
-			Toast.makeText(context, "Settings read",Toast.LENGTH_SHORT).show();
 		} 
 		catch (Exception e)
 		{
 			e.printStackTrace();
-			Toast.makeText(context, "Settings not read",Toast.LENGTH_SHORT).show();
+			Toast.makeText(context, "Les données sont ilisibles",Toast.LENGTH_SHORT).show();
 		}
 		finally
 		{
@@ -78,7 +87,7 @@ public class LocalSettings
 				isr.close();
 				fIn.close();
 			}
-			catch (IOException e)
+			catch (Exception e)
 			{
 				e.printStackTrace();
 			}
