@@ -60,6 +60,7 @@
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
 	            android:layout_below="@+id/editTextTitleGoal"
+	            android:gravity="right"
 	            android:text="@string/textGoal"/>
 			
 			<!-- CreateEvent  -->
@@ -120,7 +121,7 @@
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
 	            android:layout_below="@+id/editTextTitleNearFriends"
-	            android:text="@string/titleNearFriends" />
+	            android:text="@string/textNearFriends" />
 			
 			<!-- Friends  -->
 			<TextView 
@@ -140,7 +141,7 @@
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
 	            android:layout_below="@+id/editTextTitleFriends"
-	            android:text="@string/titleFriends"/>
+	            android:text="@string/textFriends"/>
 			
 			<!-- Profil  -->
 			<TextView 
@@ -160,7 +161,7 @@
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
 	            android:layout_below="@+id/editTextTitleProfil"
-	            android:text="@string/titleProfil" />
+	            android:text="@string/textProfil" />
 			
 
 		</RelativeLayout>   

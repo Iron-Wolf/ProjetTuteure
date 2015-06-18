@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/profil"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical" >
     
     <RelativeLayout 
@@ -65,7 +65,7 @@
 	                android:layout_toRightOf="@+id/imageViewProfil"
 	                android:layout_alignBottom="@+id/imageViewProfil"
 	                android:layout_marginTop="10dp"
-	                android:ems="10"
+	                android:ems="12"
 	                android:hint="Login"
 	                android:inputType="text" />
 	         
@@ -75,9 +75,9 @@
 	                android:layout_height="wrap_content"
 	                android:layout_toRightOf="@+id/imageViewProfil"
 	                android:layout_below="@+id/editTextLogin"
-	                android:ems="10"
+	                android:ems="12"
 	                android:hint="Mot de passe"
-	                android:inputType="text" />
+	                android:inputType="textPassword" />
 
 	            <EditText
 	                android:id="@+id/editTextFirstName"
@@ -85,9 +85,9 @@
 	                android:layout_height="wrap_content"
 	                android:layout_toRightOf="@+id/imageViewProfil"
 	                android:layout_below="@+id/editTextPassword"
-	                android:ems="10"
+	                android:ems="12"
 	                android:hint="Prénom"
-	                android:inputType="text" />
+	                android:inputType="textPersonName" />
 
 	            <EditText
 	                android:id="@+id/editTextSecondName"
@@ -95,9 +95,9 @@
 	                android:layout_height="wrap_content"
 	                android:layout_toRightOf="@+id/imageViewProfil"
 	                android:layout_below="@+id/editTextFirstName"
-	                android:ems="10"
+	                android:ems="12"
 	                android:hint="Nom"
-	                android:inputType="text" />
+	                android:inputType="textPersonName" />
 
 	            <EditText
 	                android:id="@+id/editTextMail"
@@ -105,7 +105,7 @@
 	                android:layout_height="wrap_content"
 	                android:layout_toRightOf="@+id/imageViewProfil"
 	                android:layout_below="@+id/editTextSecondName"
-	                android:ems="10"
+	                android:ems="12"
 	                android:hint="Mail"
 	                android:inputType="textEmailAddress" />
 	        
@@ -128,7 +128,7 @@
 	                android:layout_below="@+id/editTextMail"
 	                android:layout_alignBottom="@+id/imageViewQuestion"
 	                android:layout_marginTop="10dp"
-	                android:ems="10"
+	                android:ems="12"
 	                android:hint="Question secrète"
 	                android:inputType="text" />
 	            
@@ -138,8 +138,7 @@
 	                android:layout_height="wrap_content"
 	                android:layout_toRightOf="@+id/imageViewQuestion"
 	                android:layout_below="@+id/editTextSecretQuestion"
-	                android:layout_marginTop="10dp"
-	                android:ems="10"
+	                android:ems="12"
 	                android:hint="Reponse secrète"
 	                android:inputType="text" />
 
@@ -155,44 +154,42 @@
 	                android:layout_marginTop="20dp"
 	                android:src="@android:drawable/ic_menu_call" />
 
-	            <EditText
-	                android:id="@+id/editTextPays"
-	                android:layout_width="wrap_content"
-	                android:layout_height="wrap_content"
-	                android:layout_toRightOf="@+id/imageViewAdresse"
-	                android:layout_below="@+id/editTextReponseQuestion"
-	                android:layout_alignBottom="@+id/imageViewAdresse"
-	                android:layout_marginTop="15dp"
-	                android:ems="10"
-	                android:hint="Pays"
-	                android:inputType="text" />
 	            
-	            
-
-	            <EditText
-	                android:id="@+id/editTextVille"
-	                android:layout_width="wrap_content"
-	                android:layout_height="wrap_content"
-	                android:layout_toRightOf="@+id/imageViewAdresse"
-	                android:layout_below="@+id/editTextPays"
-	                android:ems="10"
-	                android:hint="Ville"
-	                android:inputType="text" />
-
 	            <EditText
 	                android:id="@+id/editTextStreet"
 	                android:layout_width="wrap_content"
 	                android:layout_height="wrap_content"
 	                android:layout_toRightOf="@+id/imageViewAdresse"
-	                 android:layout_below="@+id/editTextVille"
-	                android:ems="10"
+	                android:layout_below="@+id/editTextReponseQuestion"
+	                android:layout_marginTop="15dp"
+	                android:ems="12"
 	                android:hint="Voie"
 	                android:inputType="text" />
-
+	            
+	            
+	            <EditText
+	                android:id="@+id/editTextVille"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_toRightOf="@+id/imageViewAdresse"
+	                android:layout_below="@+id/editTextStreet"
+	                android:ems="12"
+	                android:hint="Ville"
+	                android:inputType="textPersonName" />
+	            
+	            
+	            <EditText
+	                android:id="@+id/editTextPays"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_toRightOf="@+id/imageViewAdresse"
+	                android:layout_below="@+id/editTextVille"
+	                android:ems="12"
+	                android:hint="Pays"
+	                android:inputType="text" />
 	            
 
 	            
-
 	        </RelativeLayout>
 
 	        <RelativeLayout
@@ -202,6 +199,7 @@
 	            android:layout_centerHorizontal="true"
 	            android:layout_below="@+id/relativeLayoutBody"
 	            android:layout_marginTop="10dp"
+	            android:layout_marginBottom="10dp"
 	            android:orientation="vertical" >
 
 	            <Button

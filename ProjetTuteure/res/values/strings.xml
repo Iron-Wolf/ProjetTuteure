@@ -20,39 +20,70 @@
     
     
     
-    
-    <!-- Textes A Propos -->
-    <string name="titleGoal"> But de l onglet </string>
-    <string name="textGoal"> Le but de cette onglet est d apprendre à vous servir de l application. </string>
-    
-    <string name="titleCreateEvent"> Créer un évènement </string>
-    <string name="textCreateEvent"> Pour créer un évènement il suffit de. </string>
-    
-    <string name="titleComingEvent"> Evènements à venir </string>
-    <string name="textComingEvent"> Liste les évènements à venir </string>
-    
-    <string name="titleNearFriends"> Amis proches </string>
-    <string name="textNearFriends"> Prochainement disponible </string>
-    
-    <string name="titleFriends"> Amis </string>
-    <string name="textFriends"> Liste de vos amis </string>
-    
-    <string name="titleProfil"> Profil </string>
-    <string name="textProfil"> Votre profil </string>    
+   
     
     <!-- Textes Login -->
     <string name="logout">Logout Me</string>
-    <string name="rememberme">Remember Me</string>
+    <string name="connexion">Connexion</string>
+    <string name="rememberme">Se souvenir de moi</string>
     <string name="notification">Notification</string>
     <string name="notification_title">Connexion réussie</string>
     <string name="notification_desc">Votre session est active</string>
     <string name="register">REGISTER</string>
     <string name="fullname">Full Name</string>
-    <string name="email">Email</string>
-    <string name="password">Password</string>
+    <string name="email">Login</string>
+    <string name="password">Mot de passe</string>
     <string name="alreadyregistred">Already registred. Login Me!</string>   
     <string name="register_">Register</string>
-    <string name="login">LOGIN</string>
+    <string name="login">Se connecter</string>
     <string name="new_account">Je n\'ai pas de compte, en créer un.</string>
     
+    
+    
+    
+    
+        <!-- Textes A Propos -->
+    <string name="titleGoal"> But de l onglet </string>
+    <string name="textGoal">  </string>
+    
+    <string name="titleCreateEvent"> Créer un évènement </string>
+    <string name="textCreateEvent"> Dans cet onglet se présente la liste des évènements auxquels vous participez qui ont été validé par leur organisateur. Un bouton permet d’ouvrir l’application Google Maps à l’adresse calculée pour l’événement.
+Deux boutons sont disponibles dans cet onglet :
+- Le premier « Organisation » permet de gérer les événements que vous avez créés. De cette page s’affiche le nom, la date et l’heure de l’événement ainsi que la date limite à laquelle un participant peut répondre, après ça l’adresse finale de l’événement sera calculée automatiquement. Ensuite se présente la liste des invités à l’événement. Vous pouvez relancer les amis qui n’ont pas encore répondu à l’invitation en cliquant sur « relancer » qui suit le nom de l’ami.
+Cette option pourra faire l’objet d’une amélioration future.
+- Le second « créer » permet de créer un événement, lorsque vous cliquez sur le bouton, une nouvelle page se lance. Dans celle-ci vous pouvez renseigner différents champs :
+	- le nom de l’événement
+	- la date et l’heure
+	- la date limite de réponse avant calcul de l’adresse finale
+	- un message complémentaire facultatif
+Après avoir validé, vous serez redirigé vers une page contenant une liste d’adresse à saisir. Après avoir saisie au moins 2 adresses, cliquez sur le bouton « valider ». Vous serez ensuite redirigé sur l\’onglet « créer un évènement ».
+ </string>
+    
+    <string name="titleComingEvent"> Evènements à venir </string>
+    <string name="textComingEvent"> Dans cet onglet se présente la liste des événements auxquels vous participez qui sont en attente de réponse des participants. Deux boutons sont disponibles dans cet onglet :
+- Le premier «  Non répondu » amène à une page ou vous pouvez voir tous les événements auxquels vous avez été invité, mais pour lesquelles vous n’avez pas encore donné de réponse. L’événement est indiqué par son nom ainsi que la date à laquelle il se déroula, mais aussi par la date limite de participation/calcul de l’adresse, vous avez ensuite la possibilité de choisir si vous voulez participer ou non à cet événement puis ensuite, si vous voulez participer, vous avez le choix entre trois options :
+- Choisir l’adresse par défaut, qui correspond à celle entrée dans votre profil
+- Choisir l’adresse enregistrée par géolocalisation au moment de la confirmation (il faut que la géolocalisation du téléphone soit activée)
+- Entrer une adresse manuellement
+Après validation l’événement sera mis à jour pour l’organisateur. Et vous pourrez voir les résultats de l’événement dans l’onglet « événement en attente » ou « événement à venir ».
+Cette option pourra faire l’objet d’une amélioration future.
+
+- Le second « historique » permet de consulter l’historique des évènements. 
+ </string>
+    
+    <string name="titleNearFriends"> Amis proches </string>
+    <string name="textNearFriends"> Dans cet onglet vous pourrez voir la liste de vos amis avec leur position actuelle, ou la dernière enregistrée si vous avez mis une distance supérieure à 0 mètre dans votre liste d’amis pour cet ami. 
+        Cet onglet permet aussi d’activer ou non la géolocalisation dans l’application.</string>
+    
+    <string name="titleFriends"> Amis </string>
+    <string name="textFriends"> L’onglet « Amis » contient la liste de vos amis, désignés par leur nom et leur prénom. Une option de distance est disponible, elle est utilisée pour l’onglet « amis proche ». Elle permet d’être notifié lorsqu’un amis est proche de vous, cet option correspond au nombre de mètres maximum entre vous et votre ami avant d’être notifié (ex : si vous inscrivez 100, vous serez notifié lorsque votre ami sera à 100m ou moins de vous).
+En cliquant sur « ajouter un ami » vous serez redirigé vers une autre page où vous pourrez ajouter un ami par Facebook ou par son login dans l’application. Lorsque vous avez sélectionné vos amis à ajouter, cliquez sur « valider ».
+
+Cette option pourra faire l’objet d’une amélioration future.
+        </string>
+    
+    <string name="titleProfil"> Profil </string>
+    <string name="textProfil"> Ceci est votre profil. Il renseigne sur la page principale de l’onglet le contenu du profil : votre login, nom, prénom, adresse email  et votre adresse complète.
+En appuyant sur le bouton « modifier » l’utilisateur est amené à une autre page où il peut modifier son profil. Après avoir modifié les champs désirés, appuyer sur « enregistrer ».
+  </string>    
 </resources>

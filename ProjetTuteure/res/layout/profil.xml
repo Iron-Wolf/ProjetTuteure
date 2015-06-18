@@ -32,8 +32,9 @@
 		        <ImageView
 		            android:id="@+id/imageViewImage"
 		            android:layout_width="wrap_content"
-		            android:layout_height="215dp"/>
-	        
+		            android:layout_height="100dp"
+		            android:layout_centerHorizontal="true"
+	        		android:src="@drawable/ic_launcher"/>
 	            </RelativeLayout>
 	            
 	        <RelativeLayout 
@@ -132,17 +133,39 @@
 	                android:inputType="text" />
 
 	            <TextView
+	                android:id="@+id/editTextStreet"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_toRightOf="@+id/imageViewAdresse"
+	                 android:layout_below="@+id/editTextAdresse"
+	                 android:layout_marginLeft="20dp"
+	                android:ems="10"
+	                android:text="Rue"
+	                android:inputType="text" />
+	            
+	            <TextView
+	                android:id="@+id/editTextVille"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_toRightOf="@+id/imageViewAdresse"
+	                android:layout_below="@+id/editTextStreet"
+	                android:layout_marginLeft="20dp"
+	                android:ems="10"
+	                android:text="Ville"
+	                android:inputType="text" />
+	            
+	            <TextView
 	                android:id="@+id/editTextPays"
 	                android:layout_width="wrap_content"
 	                android:layout_height="wrap_content"
-	                android:layout_below="@+id/editTextAdresse"
+	                android:layout_below="@+id/editTextVille"
 	                android:layout_toRightOf="@+id/imageViewAdresse"
 	                android:layout_marginLeft="20dp"
 	                android:ems="10"
 	                android:text="Pays"
 	                android:inputType="text" />
 	            
-	            <TextView
+	            <!--TextView
 	                android:id="@+id/editTextPostalCode"
 	                android:layout_width="wrap_content"
 	                android:layout_height="wrap_content"
@@ -151,38 +174,18 @@
 	                android:layout_marginLeft="20dp"
 	                android:ems="10"
 	                android:text="Code Postal"
-	                android:inputType="number" />
+	                android:inputType="number" /-->
 
-	            <TextView
-	                android:id="@+id/editTextVille"
-	                android:layout_width="wrap_content"
-	                android:layout_height="wrap_content"
-	                android:layout_toRightOf="@+id/imageViewAdresse"
-	                android:layout_below="@+id/editTextPostalCode"
-	                android:layout_marginLeft="20dp"
-	                android:ems="10"
-	                android:text="Ville"
-	                android:inputType="text" />
-
-	            <TextView
-	                android:id="@+id/editTextStreet"
-	                android:layout_width="wrap_content"
-	                android:layout_height="wrap_content"
-	                android:layout_toRightOf="@+id/imageViewAdresse"
-	                 android:layout_below="@+id/editTextVille"
-	                 android:layout_marginLeft="20dp"
-	                android:ems="10"
-	                android:text="Rue"
-	                android:inputType="text" />
-
+	            
 	            
 
 	            <Button
 	                android:id="@+id/buttonChange"
 	                android:layout_width="wrap_content"
 	                android:layout_height="wrap_content"
-	                android:layout_below="@+id/editTextStreet"
+	                android:layout_below="@+id/editTextPays"
 	                android:layout_marginTop="20dp"
+	                android:layout_marginBottom="20dp"
 	                android:layout_centerHorizontal="true"
 	                android:text="Modifier"
 	                android:background="@drawable/button_selector" />

@@ -32,36 +32,7 @@ public class Friends extends Fragment
             }
         });
     	
-    	
-    	TableLayout tl = (TableLayout) view.findViewById(R.id.tableLayout1);
-		
-		LayoutParams layoutParams = new LayoutParams(LayoutParams.WRAP_CONTENT,	LayoutParams.WRAP_CONTENT);
-		layoutParams.setMargins(2,10, 2, 2);
-		//layoutParams.setMarginStart(0);
-		//layoutParams.setMarginEnd(400);
-		
-		for(int i = 0; i < 10; i++)
-		{
-			TableRow tr = new TableRow(view.getContext());
-			tr.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
-			//tr.setBackground(@drawable/table);
-						
-
-			
-			//event.setMarginEnd(400);
-			
-			TextView tv = new TextView(view.getContext());
-    		tv.setText("Evenement à venir dans un temps relativement proche");
-    		//tv.setId(R.id.textViewEventName);
-    		tr.addView(tv);
-    		
-			    		
-    		tl.addView(tr, layoutParams);
-			
-		}
-		
-
-    	
+   
         return (LinearLayout) view;
         
         

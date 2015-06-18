@@ -43,8 +43,8 @@ public class AddFriends extends DialogFragment
             public void onClick(View view) {
             	//affichage simple d'une fenêtre
             	AlertDialog alertDialog = new AlertDialog.Builder(view.getContext()).create();
-        		alertDialog.setTitle("bouton valider");
-        		alertDialog.setMessage("classe : AddFriends");
+        		alertDialog.setTitle("Validation");
+        		alertDialog.setMessage("Nous sommes désolés, cette option n'est pas encore disponible...");
         		Message msg = null;
         		alertDialog.setButton(DialogInterface.BUTTON_POSITIVE,"OK", msg);
                 alertDialog.show();

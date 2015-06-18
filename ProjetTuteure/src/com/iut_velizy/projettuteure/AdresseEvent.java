@@ -103,7 +103,7 @@ public class AdresseEvent extends DialogFragment
                 	CreateEventStatic.adresse1_ville.equals("") ||
                 	CreateEventStatic.adresse1_pays.equals(""))
                 {
-                	Toast.makeText(view.getContext(), "nécessite une adresse minimum", Toast.LENGTH_SHORT).show();
+                	Toast.makeText(view.getContext(), "Nécessite une adresse minimum", Toast.LENGTH_SHORT).show();
                 }
                 else
                 {
