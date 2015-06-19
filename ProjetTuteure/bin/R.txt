@@ -123,7 +123,7 @@ int id buttonCreateEvent 0x7f0c0037
 int id buttonHistory 0x7f0c0029
 int id buttonInvite 0x7f0c0065
 int id buttonOrganise 0x7f0c0036
-int id buttonSave 0x7f0c0090
+int id buttonSave 0x7f0c0092
 int id buttonValidation 0x7f0c0034
 int id buttonWaitResponse 0x7f0c0028
 int id buyButton 0x7f0c000c
@@ -151,7 +151,7 @@ int id editTextLogin 0x7f0c0082
 int id editTextMail 0x7f0c0085
 int id editTextMessage 0x7f0c0060
 int id editTextNameEvent 0x7f0c0057
-int id editTextPassword 0x7f0c0091
+int id editTextPassword 0x7f0c008d
 int id editTextPays 0x7f0c008a
 int id editTextPays1 0x7f0c003d
 int id editTextPays2 0x7f0c0042
@@ -160,9 +160,9 @@ int id editTextPays4 0x7f0c004c
 int id editTextPays5 0x7f0c0051
 int id editTextPays6 0x7f0c0056
 int id editTextProfil 0x7f0c0081
-int id editTextReponseQuestion 0x7f0c0092
+int id editTextReponseQuestion 0x7f0c0090
 int id editTextSecondName 0x7f0c0084
-int id editTextSecretQuestion 0x7f0c008e
+int id editTextSecretQuestion 0x7f0c008f
 int id editTextStreet 0x7f0c0088
 int id editTextTextComingEvent 0x7f0c0020
 int id editTextTextCreateEvent 0x7f0c001e
@@ -206,7 +206,7 @@ int id imageView1 0x7f0c0072
 int id imageViewAdresse 0x7f0c0086
 int id imageViewImage 0x7f0c007f
 int id imageViewProfil 0x7f0c0080
-int id imageViewQuestion 0x7f0c008d
+int id imageViewQuestion 0x7f0c008e
 int id layoutAddFriends 0x7f0c002d
 int id line 0x7f0c002a
 int id loginEmail 0x7f0c0074
@@ -222,7 +222,7 @@ int id normal 0x7f0c0004
 int id production 0x7f0c0009
 int id profil 0x7f0c007d
 int id relativeLayoutBody 0x7f0c008c
-int id relativeLayoutButton 0x7f0c008f
+int id relativeLayoutButton 0x7f0c0091
 int id relativeLayoutHeader 0x7f0c0062
 int id relativeLayoutImage 0x7f0c007e
 int id relativeLayoutPrincipal 0x7f0c001a

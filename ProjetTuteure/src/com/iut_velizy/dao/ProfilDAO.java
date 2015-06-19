@@ -35,13 +35,16 @@ public class ProfilDAO extends AsyncTask<Void, Void, String>
 	private String jsonData;
 	
 	//champs affichées dans l'application
-	private static String login;
-	private static String prenom;
-	private static String nom;
-	private static String mail;
-	private static String voie;
-	private static String ville;
-	private static String pays;
+	public static String login;
+	public static String password;
+	public static String prenom;
+	public static String nom;
+	public static String mail;
+	public static String qst_secrete;
+	public static String rsp_secrete;
+	public static String voie;
+	public static String ville;
+	public static String pays;
 	
 	
 	public ProfilDAO(Profil profil)
@@ -82,9 +85,12 @@ public class ProfilDAO extends AsyncTask<Void, Void, String>
 	            //éléments du profil
 	            JSONObject element = array.getJSONObject(0);
 	            login = element.getString("profil_login");
+	            password = element.getString("profil_password");
 	            prenom = element.getString("profil_prenom");
 	            nom = element.getString("profil_nom");
 	            mail = element.getString("profil_email");
+	            qst_secrete = element.getString("profil_question_secrete");
+	            rsp_secrete = element.getString("profil_reponse_secrete");
 	
 	            //éléments de l'adresse
 	            element = array.getJSONObject(1);
