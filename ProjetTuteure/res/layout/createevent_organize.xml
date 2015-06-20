@@ -47,91 +47,12 @@
 	        android:layout_centerVertical="true">
             
             <TextView
-	            android:id="@+id/textViewEventNameOrganize"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:text="Nom : "
-	            android:textAppearance="?android:attr/textAppearanceMedium"
-	            android:textColor="@color/text_blue" />
-            
-            <TextView
-	            android:id="@+id/textViewName"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_toRightOf="@+id/textViewEventName"
-	            android:layout_alignBottom="@+id/textViewEventName"
-	            android:text="Nom de l'évènement" />
-            
-            <TextView
-	            android:id="@+id/textViewEventDate"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_below="@+id/textViewName"
-	            android:layout_marginTop="10dp"
-	            android:text="Date : "
-	            android:textAppearance="?android:attr/textAppearanceMedium"
-	            android:textColor="@color/text_blue" />
-
-            <TextView
-	            android:id="@+id/textViewDate"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_toRightOf="@+id/textViewEventDate"
-	            android:layout_alignBottom="@+id/textViewEventDate"
-	            android:text="01/01/2000" />
-            
-            <TextView
-	            android:id="@+id/textViewDateLink"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_toRightOf="@+id/textViewDate"
-	            android:layout_alignBottom="@+id/textViewEventDate"
-	            android:text=" à " />
-            
-            <TextView
-	            android:id="@+id/textViewTimes"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_toRightOf="@+id/textViewDateLink"
-	            android:layout_alignBottom="@+id/textViewEventDate"
-	            android:text="hh:mm" />
-            
-            <TextView
-	            android:id="@+id/textViewEventDateLimit"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_below="@+id/textViewEventDate"
-	            android:layout_marginTop="10dp"
-	            android:text="Date limite : "
-	            android:textAppearance="?android:attr/textAppearanceMedium"
-	            android:textColor="@color/text_blue" />
-
-            <TextView
-	            android:id="@+id/textViewDateLimit"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_toRightOf="@+id/textViewEventDateLimit"
-	            android:layout_alignBottom="@+id/textViewEventDateLimit"
-	            android:text="01/01/2000" />
-            
-            <Button
-		            android:id="@+id/buttonHistory"
+		            android:id="@+id/textViewFirstName"
 		            android:layout_width="wrap_content"
-	            	android:layout_height="25dp"
-		            android:layout_marginLeft="30dp"
-		            
-		            android:layout_toRightOf="@+id/textViewDateLimit"
-		            android:layout_alignBaseline="@+id/textViewEventDateLimit"
-		            android:text="Calculer"
-		            android:background="@drawable/little_button_selector" />
-
-            
-            <View
-				android:layout_width="fill_parent"
-	       		android:layout_height="1px"
-	       		android:layout_below="@+id/textViewEventDateLimit"
-	       		android:layout_marginTop="15dp"
-	        	android:background="#FF909090" />
+		            android:layout_height="wrap_content"
+		            android:layout_centerHorizontal="true"
+		            android:text="Option à venir"
+		            android:textAppearance="?android:attr/textAppearanceMedium" />
             
         </RelativeLayout>
         

@@ -65,44 +65,7 @@ public class History extends DialogFragment
     	//récupération de tout les id des événement créer par l'utilisateur
     	HistoryDAO hDAO = new HistoryDAO(this);
     	hDAO.execute();
-        /*
-        TableLayout tl = (TableLayout) view.findViewById(R.id.tableLayout1);
-		
-		LayoutParams layoutParams = new LayoutParams(LayoutParams.WRAP_CONTENT,	LayoutParams.WRAP_CONTENT);
-		layoutParams.setMargins(2,10, 2, 2);
-		//layoutParams.setMarginStart(0);
-		//layoutParams.setMarginEnd(400);
-		
-		for(int i = 0; i < 10; i++)
-		{
-			TableRow tr = new TableRow(view.getContext());
-			tr.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
-			//tr.setBackground(@drawable/table);
-						
-			LayoutParams event = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
-			event.setMargins(20, 45, 2, 2);
-			//event.setMarginEnd(400);
-			
-			TextView tv = new TextView(view.getContext());
-    		tv.setText("Nom de l'event");
-    		//tv.setId(R.id.textViewEventName);
-    		tr.addView(tv, event);
-			
-			LayoutParams add = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
-			add.setMargins(20, 45, 2, 2);
-			//event.setMarginEnd(400);
-			
-			TextView tv2 = new TextView(view.getContext());
-    		tv2.setText("Adresse de l'event");
-    		//tv.setId(R.id.textViewEventName);
-    		tr.addView(tv2, add);
-    		
-			    		
-    		tl.addView(tr, layoutParams);
-			
-		}
-		*/
-
+        
     	
         return (LinearLayout) view;
         

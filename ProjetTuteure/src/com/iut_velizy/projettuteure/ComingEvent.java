@@ -8,8 +8,11 @@ import com.iut_velizy.dao.GetEventDAO;
 import com.iut_velizy.localStorage.ComingEventStatic;
 import com.iut_velizy.localStorage.CreateEventStatic;
 
+import android.app.AlertDialog;
 import android.app.Fragment;
+import android.content.DialogInterface;
 import android.os.Bundle;
+import android.os.Message;
 import android.telephony.TelephonyManager;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -38,6 +41,22 @@ public class ComingEvent extends Fragment
     			//affiche la fenêtre d'historique
     			History newF = new History();
     			newF.show(getFragmentManager(), "dialog");
+            }
+        });
+        
+        //on récupère le bouton et on lui attribut un Listener
+    	Button buttonWait = (Button) view.findViewById(R.id.buttonWaitResponse);
+    	buttonWait.setOnClickListener(new View.OnClickListener()
+    	{
+    		@Override
+    		public void onClick(View v) {
+    			//affichage simple d'une fenêtre
+            	AlertDialog alertDialog = new AlertDialog.Builder(v.getContext()).create();
+        		alertDialog.setTitle("Validation");
+        		alertDialog.setMessage("Nous sommes désolés, cette option n'est pas encore disponible...");
+        		Message msg = null;
+        		alertDialog.setButton(DialogInterface.BUTTON_POSITIVE,"OK", msg);
+                alertDialog.show();
             }
         });
 		
