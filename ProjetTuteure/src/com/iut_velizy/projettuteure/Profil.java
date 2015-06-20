@@ -1,6 +1,7 @@
 package com.iut_velizy.projettuteure;
 
 import com.iut_velizy.dao.ProfilDAO;
+import com.iut_velizy.localStorage.LocalSettings;
 
 import android.app.Fragment;
 import android.app.FragmentTransaction;
@@ -27,7 +28,7 @@ public class Profil extends Fragment
     		@Override
     		public void onClick(View v) {
     			//affiche la fenêtre de modification du profil
-    			ChangeProfil newF = new ChangeProfil();
+    			ChangeProfil newF = new ChangeProfil(Profil.this);
     			newF.show(getFragmentManager(), "changeProfil dialog");
             }
         });
@@ -37,5 +38,13 @@ public class Profil extends Fragment
     	db.execute(); //récupération des données et mise à jour de la vue
     	
         return (LinearLayout) view;
+    }
+    
+    
+    public void updateProfil()
+    {
+    	ProfilDAO db = new ProfilDAO(this);
+    	db.execute();
+    	LocalSettings.profilCreer=false;
     }
 }

@@ -1,6 +1,9 @@
 package com.iut_velizy.projettuteure;
 
+import com.iut_velizy.dao.LoginDAO;
 import com.iut_velizy.dao.ProfilDAO;
+import com.iut_velizy.dao.ProfilUpdateDAO;
+import com.iut_velizy.localStorage.LocalSettings;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -8,6 +11,7 @@ import android.app.DialogFragment;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.Message;
+import android.telephony.TelephonyManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,6 +36,12 @@ public class ChangeProfil extends DialogFragment
 	private EditText voie;
 	private EditText ville;
 	private EditText pays;
+	private Profil profil;
+	
+	public ChangeProfil(Profil profil)
+	{
+		this.profil = profil;
+	}
 	
 	
 	@Override
@@ -84,14 +94,29 @@ public class ChangeProfil extends DialogFragment
         validButton.setOnClickListener(new View.OnClickListener()
         {
             @Override
-            public void onClick(View view) {
-            	//affichage simple d'une fenêtre
-            	AlertDialog alertDialog = new AlertDialog.Builder(view.getContext()).create();
-        		alertDialog.setTitle("A venir");
-        		alertDialog.setMessage("Option en cours de développement");
-        		Message msg = null;
-        		alertDialog.setButton(DialogInterface.BUTTON_POSITIVE,"OK", msg);
-                alertDialog.show();
+            public void onClick(View view)
+            {
+            	//numéro IMEI
+	        	TelephonyManager telephonyManager = (TelephonyManager)getView().getContext().getSystemService(getView().getContext().TELEPHONY_SERVICE);
+	        	String imei = telephonyManager.getDeviceId();
+            	
+            	String url = new String("http://"+LocalSettings.url+"/updateProfil.php");
+            	url += "?id=" + imei;
+            	url += "&login=" + login.getText().toString();
+            	url += "&password=" + password.getText().toString();
+            	url += "&prenom=" + prenom.getText().toString();
+            	url += "&nom=" + nom.getText().toString();
+            	url += "&email=" +  mail.getText().toString();
+            	url += "&quest_secre=" + qst_secret.getText().toString();
+            	url += "&rep_secre=" + rsp_secret.getText().toString();
+            	url += "&voie=" + voie.getText().toString();
+            	url += "&ville=" + ville.getText().toString();
+            	url += "&pays=" + pays.getText().toString();
+            	
+            	url = url.replace(" ", "%20"); 
+        		
+				ProfilUpdateDAO ldao = new ProfilUpdateDAO(getFragmentManager());
+				ldao.execute(url);
             }
         });
         
@@ -107,4 +132,11 @@ public class ChangeProfil extends DialogFragment
 
         return view;
     }
+	
+	
+	@Override
+	public void onDismiss(DialogInterface dialog)
+	{
+		profil.updateProfil();
+	}
 }

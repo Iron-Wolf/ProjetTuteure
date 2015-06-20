@@ -1,8 +1,15 @@
 package com.iut_velizy.projettuteure;
 
+import java.util.ArrayList;
+
+import com.iut_velizy.dao.GetEventDAO;
+import com.iut_velizy.dao.HistoryDAO;
+import com.iut_velizy.localStorage.ComingEventStatic;
+
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.os.Bundle;
+import android.telephony.TelephonyManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,20 +47,6 @@ public class History extends DialogFragment
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 	{
         View view = inflater.inflate(R.layout.comingevent_history, container, false);
-        /*
-        Button validButton = (Button) view.findViewById(R.id.buttonValidation);
-        validButton.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View view) {
-            	AlertDialog alertDialog = new AlertDialog.Builder(view.getContext()).create();
-        		alertDialog.setTitle("bouton valider");
-        		alertDialog.setMessage("classe : AddFriends");
-        		Message msg = null;
-        		alertDialog.setButton(DialogInterface.BUTTON_POSITIVE,"OK", msg);
-                alertDialog.show();
-            }
-        });*/
         
         //bouton retour
         ImageButton cancelButton = (ImageButton) view.findViewById(R.id.imageButtonRetour);
@@ -64,8 +57,15 @@ public class History extends DialogFragment
                 dismiss();
             }
         });
-
         
+    	
+    	//suppression de l'ArrayList avant le traitement
+    	ComingEventStatic.listHistoryEvent = new ArrayList<ArrayList>();
+    	
+    	//récupération de tout les id des événement créer par l'utilisateur
+    	HistoryDAO hDAO = new HistoryDAO(this);
+    	hDAO.execute();
+        /*
         TableLayout tl = (TableLayout) view.findViewById(R.id.tableLayout1);
 		
 		LayoutParams layoutParams = new LayoutParams(LayoutParams.WRAP_CONTENT,	LayoutParams.WRAP_CONTENT);
@@ -101,7 +101,7 @@ public class History extends DialogFragment
     		tl.addView(tr, layoutParams);
 			
 		}
-		
+		*/
 
     	
         return (LinearLayout) view;

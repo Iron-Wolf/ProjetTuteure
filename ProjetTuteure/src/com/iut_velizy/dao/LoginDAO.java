@@ -96,7 +96,7 @@ public class LoginDAO extends AsyncTask<String, Void, String>
 			Fragment prev = fm.findFragmentByTag("login dialog");
 			if (prev != null) {
                 DialogFragment df = (DialogFragment) prev;
-                Toast.makeText(df.getView().getContext(), "Impossible de se connécter", Toast.LENGTH_SHORT).show();
+                Toast.makeText(df.getView().getContext(), "Impossible de se connecter", Toast.LENGTH_SHORT).show();
             }
 		}
     }

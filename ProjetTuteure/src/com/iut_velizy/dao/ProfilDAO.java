@@ -113,25 +113,25 @@ public class ProfilDAO extends AsyncTask<Void, Void, String>
 		{
 			//mise à jour des TextView en fonction des données
 	        TextView tv = (TextView)profil.getView().findViewById(R.id.editTextLogin);
-	    	tv.setText(tv.getText() + " : " + login);
+	        tv.setText("Login : "); tv.append(login);
 	    	
 	    	TextView tv2 = (TextView)profil.getView().findViewById(R.id.editTextFirstName);
-	    	tv2.setText(tv2.getText() + " : " + prenom);
+	    	tv2.setText("Prénom : "); tv2.append(prenom);
 	    	
 	    	TextView tv3 = (TextView)profil.getView().findViewById(R.id.editTextSecondName);
-	    	tv3.setText(tv3.getText() + " : " + nom);
+	    	tv3.setText("Nom : "); tv3.append(nom);
 	    	
 	    	TextView tv4 = (TextView)profil.getView().findViewById(R.id.editTextMail);
-	    	tv4.setText(tv4.getText() + " : " + mail);
+	    	tv4.setText("Mail : "); tv4.append(mail);
 	    	
 	    	TextView tv5 = (TextView)profil.getView().findViewById(R.id.editTextStreet);
-	    	tv5.setText(tv5.getText() + " : " + voie);
+	    	tv5.setText("Voie : "); tv5.append(mail);
 	    	
 	    	TextView tv6 = (TextView)profil.getView().findViewById(R.id.editTextVille);
-	    	tv6.setText(tv6.getText() + " : " + ville);
+	    	tv6.setText("Ville : "); tv6.append(ville);
 	    	
 	    	TextView tv7 = (TextView)profil.getView().findViewById(R.id.editTextPays);
-	    	tv7.setText(tv7.getText() + " : " + pays);
+	    	tv7.setText("Pays : "); tv7.append(pays);
 		}
     }
 	
