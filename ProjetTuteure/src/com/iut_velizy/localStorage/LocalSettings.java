@@ -29,8 +29,8 @@ public class LocalSettings
 	public final String nomFichier = "settings.dat";
 	
 	
-	public static final String url = "192.168.1.12"; //permet de tester en local
-	//public static final String url = "bountiful.minecraftnoob.com";
+	//public static final String url = "192.168.1.12"; //permet de tester en local
+	public static final String url = "bountiful.minecraftnoob.com";
 	
 	
 	// sauvegarder données
