@@ -1,3 +1,5 @@
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](http://shields.io/)
+
 # ProjetTuteure
 Repo du projet Android.  
 Le README contiendra l'ensemble des informations dont nous aurons besoin pour nous familiariser avec Git ou Android.  
