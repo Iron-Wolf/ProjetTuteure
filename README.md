@@ -44,7 +44,7 @@ Sur le commit, dans la vue *history* : __Clic droit__ > __Rebase on__.
 2. Configurer Eclipse avec l'API Google Play Service :  
 [par ici] (https://stackoverflow.com/questions/16395495/add-google-maps-to-android-app?answertab=active#tab-top)  
 
-##Facebook
+## Facebook
 1. Télécharger le dernier SDK Facebook : https://developers.facebook.com/docs/android/downloads
 2. Suivre le tuto : http://stackoverflow.com/questions/29379890/android-facebook-sdk-4-in-eclipse
 
