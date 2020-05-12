@@ -1,4 +1,4 @@
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](http://shields.io/)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-no-red.svg)](https://shields.io/)
 
 # ProjetTuteure
 Repo du projet Android.  
